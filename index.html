@@ -1,494 +1,1017 @@
 <!doctype html>
 <html lang="es">
 <head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Grupo One Love | Show Profesional</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-background:#070a12;
-color:white;
-font-family:Inter;
-overflow-x:hidden;
-}
-
-/* HEADER */
-
-header{
-
-position:fixed;
-width:100%;
-top:0;
-
-background:rgba(0,0,0,0.4);
-
-backdrop-filter:blur(10px);
-
-padding:20px;
-
-z-index:1000;
-
-}
-
-.logo{
-
-font-family:Oswald;
-font-size:22px;
-letter-spacing:2px;
-
-}
-
-/* HERO */
-
-.hero{
-
-height:100vh;
-
-background:
-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.95)),
-url("assetsstage.jpg");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-text-align:center;
-
-animation:fadeIn 2s;
-
-}
-
-.hero h1{
-
-font-family:Oswald;
-font-size:80px;
-margin:0;
-
-animation:slideUp 1.5s;
-
-}
-
-.hero p{
-
-font-size:24px;
-margin-top:10px;
-opacity:0.8;
-
-animation:slideUp 2s;
-
-}
-
-/* BUTTON */
-
-.button{
-
-margin-top:30px;
-
-display:inline-block;
-
-padding:18px 40px;
-
-background:linear-gradient(45deg,#ff2daa,#22d3ee);
-
-border-radius:12px;
-
-text-decoration:none;
-
-color:white;
-
-font-weight:bold;
-
-transition:0.3s;
-
-}
-
-.button:hover{
-
-transform:scale(1.05);
-
-}
-
-/* SECTIONS */
-
-section{
-
-padding:100px 20px;
-
-max-width:1100px;
-
-margin:auto;
-
-animation:fadeIn 2s;
-
-}
-
-h2{
-
-font-family:Oswald;
-
-font-size:42px;
-
-margin-bottom:30px;
-
-}
-
-/* CARDS */
-
-.cards{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:20px;
-
-}
-
-.card{
-
-background:rgba(255,255,255,0.05);
-
-padding:30px;
-
-border-radius:15px;
-
-transition:0.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-background:rgba(255,255,255,0.1);
-
-}
-
-/* GALLERY */
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:1fr 1fr 1fr;
-
-gap:20px;
-
-}
-
-.gallery img{
-
-width:100%;
-
-border-radius:15px;
-
-transition:0.3s;
-
-}
-
-.gallery img:hover{
-
-transform:scale(1.05);
-
-}
-
-/* VIDEO */
-
-.video iframe{
-
-width:100%;
-
-height:450px;
-
-border-radius:15px;
-
-}
-
-/* CONTACT */
-
-.contact{
-
-background:rgba(255,255,255,0.05);
-
-padding:40px;
-
-border-radius:15px;
-
-}
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-
-padding:50px;
-
-background:black;
-
-}
-
-/* WHATSAPP FLOAT */
-
-.whatsapp{
-
-position:fixed;
-
-bottom:20px;
-right:20px;
-
-background:#25D366;
-
-padding:18px 30px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-color:white;
-
-font-weight:bold;
-
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-
-transition:0.3s;
-
-}
-
-.whatsapp:hover{
-
-transform:scale(1.1);
-
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeIn{
-
-from{opacity:0}
-to{opacity:1}
-
-}
-
-@keyframes slideUp{
-
-from{
-
-opacity:0;
-transform:translateY(50px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070a12" />
+
+  <title>Grupo One Love — Show profesional estilo festival</title>
+  <meta name="description" content="Grupo One Love: show profesional estilo festival para bodas, fiestas, ayuntamientos y eventos. Repertorio amplio, imagen premium y contratación rápida por WhatsApp." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://grupoonelove.es" />
+
+  <!-- Tipografías gratuitas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#070a12;
+      --bg2:#0b0f18;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.10);
+
+      --a1:#ff2daa;
+      --a2:#22d3ee;
+      --a3:#a78bfa;
+
+      --r: 22px;
+      --max: 1160px;
+      --navh: 76px;
+      --ease: cubic-bezier(.2,.8,.2,1);
+      --shadow: 0 28px 90px rgba(0,0,0,.55);
+      --glow: 0 0 38px rgba(255,45,170,.22), 0 0 55px rgba(34,211,238,.18);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 650px at 20% 10%, rgba(255,45,170,.15), transparent 55%),
+        radial-gradient(900px 700px at 90% 20%, rgba(34,211,238,.12), transparent 50%),
+        radial-gradient(800px 700px at 50% 120%, rgba(167,139,250,.10), transparent 45%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Línea superior */
+    .topline{
+      position:fixed; left:0; right:0; top:0;
+      height:3px;
+      background:linear-gradient(90deg, var(--a2), var(--a1), var(--a3), var(--a2));
+      z-index:9999;
+      opacity:.9;
+    }
+
+    /* Ruido suave */
+    .noise{
+      pointer-events:none;
+      position:fixed; inset:0;
+      opacity:.06;
+      mix-blend-mode: overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+      background-size:320px 320px;
+      z-index:0;
+    }
+
+    /* Header */
+    header{
+      position:fixed;
+      top:0; left:0; right:0;
+      height: var(--navh);
+      display:flex;
+      align-items:center;
+      z-index:1000;
+      background: rgba(7,10,18,.35);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: background .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    header.scrolled{
+      background: rgba(7,10,18,.78);
+      box-shadow: 0 12px 48px rgba(0,0,0,.40);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+    }
+    .logoMark{
+      width:40px; height:40px;
+      border-radius: 14px;
+      background:
+        radial-gradient(12px 12px at 30% 30%, rgba(255,255,255,.9), transparent 60%),
+        linear-gradient(135deg, rgba(34,211,238,.95), rgba(255,45,170,.92));
+      box-shadow: var(--glow);
+    }
+    .brandText{ line-height:1.05; }
+    .brandText strong{
+      font-family: Oswald, Inter, system-ui;
+      letter-spacing:.6px;
+      font-size: 18px;
+      text-transform: uppercase;
+      display:block;
+    }
+    .brandText span{
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing:.2px;
+    }
+
+    nav ul{
+      list-style:none; padding:0; margin:0;
+      display:flex; align-items:center; gap:14px;
+    }
+    nav a{
+      font-size: 13px;
+      color: rgba(255,255,255,.86);
+      padding: 10px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+      white-space:nowrap;
+    }
+    nav a:hover{
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.14);
+      transform: translateY(-1px);
+      color:#fff;
+    }
+
+    .navRight{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:10px;
+      min-width: 220px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:#fff;
+      font-weight: 700;
+      font-size: 13px;
+      cursor:pointer;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
+      user-select:none;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.18);
+    }
+    .btnPrimary{
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(34,211,238,.95), rgba(255,45,170,.92));
+      box-shadow: var(--glow);
+    }
+    .btnPrimary:hover{
+      transform: translateY(-1px) scale(1.01);
+    }
+    .btnIcon{
+      width: 44px; height: 44px; padding:0;
+      border-radius: 14px;
+    }
+    .hamburger{ display:none; }
+
+    /* Menú móvil desplegable */
+    .menuSheet{
+      position:fixed;
+      top: var(--navh);
+      left:0; right:0;
+      z-index:999;
+      display:none;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(7,10,18,.90);
+      backdrop-filter: blur(16px);
+    }
+    .menuSheet.open{ display:block; }
+    .menuSheet .container{ padding: 12px 0 14px; }
+    .menuSheet a{
+      display:block;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      margin-bottom: 10px;
+      font-weight: 800;
+      color: rgba(255,255,255,.92);
+    }
+    .menuSheet a:last-child{ margin-bottom:0; }
+
+    /* Hero */
+    main{ position:relative; z-index:1; }
+    .hero{
+      padding-top: calc(var(--navh) + 20px);
+      min-height: 92vh;
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      align-items:stretch;
+    }
+
+    /* Fondo escenario real (tu imagen) */
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(7,10,18,.12), rgba(7,10,18,.88) 70%, rgba(7,10,18,1)),
+        url("assetsstage.jpg") center/cover no-repeat;
+      filter: saturate(1.14) contrast(1.08);
+      transform: scale(1.03);
+      z-index:-2;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:-20%;
+      background:
+        radial-gradient(520px 320px at 18% 20%, rgba(34,211,238,.20), transparent 60%),
+        radial-gradient(540px 340px at 82% 25%, rgba(255,45,170,.20), transparent 60%),
+        radial-gradient(720px 420px at 50% 78%, rgba(167,139,250,.10), transparent 65%);
+      z-index:-1;
+    }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 26px;
+      align-items:end;
+      padding: 46px 0 34px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.22);
+      backdrop-filter: blur(10px);
+      font-size: 12px;
+      color: rgba(255,255,255,.90);
+      box-shadow: 0 12px 40px rgba(0,0,0,.25);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(135deg, var(--a2), var(--a1));
+      box-shadow: 0 0 16px rgba(34,211,238,.25), 0 0 16px rgba(255,45,170,.25);
+    }
+
+    h1{
+      margin: 18px 0 12px;
+      font-family: Oswald, Inter, system-ui;
+      font-size: clamp(42px, 5.4vw, 76px);
+      line-height: .95;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      text-shadow: 0 10px 70px rgba(0,0,0,.60);
+    }
+    .gradText{
+      background: linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.70) 60%, rgba(255,255,255,.95));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .sub{
+      max-width: 60ch;
+      margin: 0 0 22px;
+      color: rgba(255,255,255,.84);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .ctaRow{ display:flex; gap:12px; flex-wrap:wrap; }
+
+    .heroCards{
+      display:grid;
+      gap:12px;
+      align-self:stretch;
+      padding-bottom: 6px;
+    }
+    .card{
+      border-radius: var(--r);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 30px 70px rgba(0,0,0,.32);
+      padding: 18px 18px;
+    }
+
+    .kpiRow{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .kpi{
+      padding: 14px 14px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.20);
+    }
+    .kpi strong{ display:block; font-size: 18px; }
+    .kpi span{ display:block; color: var(--muted); font-size: 12px; margin-top: 2px; line-height:1.35; }
+
+    .miniList{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    .pill{
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+    }
+
+    .scrollHint{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 0 22px;
+      color: rgba(255,255,255,.65);
+      font-size: 12px;
+      user-select:none;
+    }
+    .mouse{
+      width: 20px; height: 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.25);
+      position:relative;
+    }
+    .mouse:after{
+      content:"";
+      width:4px; height:4px;
+      border-radius:999px;
+      background: rgba(255,255,255,.7);
+      position:absolute;
+      left:50%; top:7px;
+      transform: translateX(-50%);
+      animation: wheel 1.2s var(--ease) infinite;
+    }
+    @keyframes wheel{
+      0%{ transform: translate(-50%, 0); opacity:.8; }
+      70%{ transform: translate(-50%, 10px); opacity:.15; }
+      100%{ opacity:0; }
+    }
+
+    /* Secciones */
+    section{ padding: 84px 0; }
+    .sectionHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom: 22px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-family: Oswald, Inter, system-ui;
+      letter-spacing:.7px;
+      text-transform: uppercase;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height:1.05;
+    }
+    .sectionHead p{
+      margin:0;
+      color: var(--muted);
+      max-width: 68ch;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .panel{
+      border-radius: var(--r);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panelPad{ padding: 20px 20px; }
+
+    .featList{ display:grid; gap:10px; margin-top: 8px; }
+    .feat{
+      display:flex;
+      gap:12px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .feat i{
+      width:36px; height:36px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(34,211,238,.25), rgba(255,45,170,.20));
+      border: 1px solid rgba(255,255,255,.12);
+      font-style: normal;
+      font-weight: 900;
+    }
+    .feat b{ display:block; font-size: 13px; }
+    .feat small{ display:block; color: var(--muted); font-size: 12px; line-height: 1.55; margin-top:2px; }
+
+    /* Galería */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .gItem{
+      position:relative;
+      border-radius: 20px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      cursor:pointer;
+      min-height: 170px;
+      transform: translateY(0);
+      transition: transform .25s var(--ease), border-color .25s var(--ease);
+    }
+    .gItem:hover{
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,.20);
+    }
+    .gItem img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter: saturate(1.06) contrast(1.05);
+      transform: scale(1.02);
+      transition: transform .35s var(--ease);
+    }
+    .gItem:hover img{ transform: scale(1.06); }
+
+    .gCap{
+      position:absolute;
+      left:0; right:0; bottom:0;
+      padding: 12px 12px;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,.78));
+      color: rgba(255,255,255,.95);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-end;
+    }
+    .gCap span{ color: rgba(255,255,255,.70); font-size: 11px; }
+
+    .span8{ grid-column: span 8; }
+    .span4{ grid-column: span 4; }
+    .span6{ grid-column: span 6; }
+
+    /* Vídeo */
+    .videoWrap{
+      border-radius: var(--r);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+    }
+    .ratio{ position:relative; padding-top:56.25%; background:#000; }
+    .ratio iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+    /* Contratación */
+    .bookingGrid{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form{ display:grid; gap:10px; }
+    .field{ display:grid; gap:6px; }
+    label{ font-size: 12px; color: rgba(255,255,255,.78); }
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.92);
+      outline:none;
+      font-family: inherit;
+      font-size: 13px;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    .formRow{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+    .note{ color: var(--muted); font-size: 12px; line-height: 1.7; }
+
+    /* Footer */
+    footer{
+      padding: 34px 0 42px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.12);
+    }
+    .footGrid{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .links{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+    }
+    .links a{
+      padding: 8px 10px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+
+    /* WhatsApp flotante */
+    .waFloat{
+      position:fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1200;
+    }
+    .waBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.38);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 70px rgba(0,0,0,.45);
+      font-weight: 900;
+      font-size: 13px;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+    }
+    .waBtn:hover{
+      transform: translateY(-1px) scale(1.01);
+      background: rgba(0,0,0,.48);
+      border-color: rgba(255,255,255,.20);
+    }
+
+    /* Lightbox (zoom galería) */
+    .lightbox{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.82);
+      display:none;
+      z-index: 2000;
+      padding: 22px;
+      align-items:center;
+      justify-content:center;
+    }
+    .lightbox.open{ display:flex; }
+    .lightboxInner{
+      width:min(1100px, 100%);
+      border-radius: 22px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,24,.85);
+      box-shadow: 0 40px 120px rgba(0,0,0,.65);
+      position:relative;
+    }
+    .lightboxImg{
+      width:100%;
+      max-height: 78vh;
+      object-fit:contain;
+      background:#000;
+    }
+    .lightboxBar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding: 12px 14px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+      font-size: 12px;
+    }
+    .xBtn{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color:#fff;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-weight: 900;
+      cursor:pointer;
+    }
+
+    /* Animación scroll */
+    .reveal{
+      opacity:0;
+      transform: translateY(16px);
+      transition: opacity .75s var(--ease), transform .75s var(--ease);
+    }
+    .reveal.in{ opacity:1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      nav ul{ display:none; }
+      .hamburger{ display:inline-flex; }
+      .heroGrid{ grid-template-columns: 1fr; align-items:start; }
+      .grid2{ grid-template-columns: 1fr; }
+      .bookingGrid{ grid-template-columns: 1fr; }
+      .formRow{ grid-template-columns: 1fr; }
+      .span8{ grid-column: span 12; }
+      .span6{ grid-column: span 12; }
+      .span4{ grid-column: span 6; }
+      .navRight{ min-width:auto; }
+      .brand{ min-width:auto; }
+    }
+    @media (max-width: 560px){
+      .span4{ grid-column: span 12; }
+      .kpiRow{ grid-template-columns: 1fr; }
+      .btn{ padding: 12px 12px; }
+    }
+  </style>
 </head>
 
 <body>
-
-<header>
-
-<div class="logo">
-
-GRUPO ONE LOVE
-
-</div>
-
-</header>
-
-<div class="hero">
-
-<div>
-
-<h1>
-
-GRUPO ONE LOVE
-
-</h1>
-
-<p>
-
-Show profesional estilo festival
-
-</p>
-
-<a class="button"
-
-href="https://wa.me/34634352905"
-
-target="_blank">
-
-CONTRATAR
-
-</a>
-
-</div>
-
-</div>
-
-<section>
-
-<h2>
-
-EL SHOW
-
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-Repertorio completo  
-Pop  
-Rock  
-Latino  
-Remember  
-
-</div>
-
-<div class="card">
-
-Imagen profesional  
-Experiencia  
-Show dinámico  
-Ambiente festival  
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>
-
-GALERÍA
-
-</h2>
-
-<div class="gallery">
-
-<img src="assetsstage.jpg">
-
-<img src="assetsstage.jpg">
-
-<img src="assetsstage.jpg">
-
-</div>
-
-</section>
-
-<section class="video">
-
-<h2>
-
-VIDEO
-
-</h2>
-
-<iframe
-
-src="https://www.youtube.com/embed/XXXXXXXX"
-
-allowfullscreen>
-
-</iframe>
-
-</section>
-
-<section>
-
-<h2>
-
-CONTRATACIÓN
-
-</h2>
-
-<div class="contact">
-
-Disponible para:
-
-<br><br>
-
-Bodas  
-Fiestas  
-Ayuntamientos  
-Eventos  
-
-<br><br>
-
-<a class="button"
-
-href="https://wa.me/34634352905"
-
-target="_blank">
-
-SOLICITAR FECHA
-
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Grupo One Love
-
-</footer>
-
-<a class="whatsapp"
-
-href="https://wa.me/34634352905"
-
-target="_blank">
-
-WhatsApp
-
-</a>
-
+  <div class="topline" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header id="siteHeader">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <div class="logoMark" aria-hidden="true"></div>
+        <div class="brandText">
+          <strong>Grupo One Love</strong>
+          <span>Show premium • Estilo festival</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#show">Show</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#contratacion">Contratación</a></li>
+        </ul>
+      </nav>
+
+      <div class="navRight">
+        <a class="btn btnIcon hamburger" id="menuBtn" href="javascript:void(0)" aria-label="Abrir menú">☰</a>
+        <a class="btn" href="#contratacion">Contratar</a>
+        <a class="btn btnPrimary" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="menuSheet" id="menuSheet" aria-label="Menú móvil">
+    <div class="container">
+      <a href="#show" class="mLink">Show</a>
+      <a href="#galeria" class="mLink">Galería</a>
+      <a href="#video" class="mLink">Vídeo</a>
+      <a href="#contratacion" class="mLink">Contratación</a>
+    </div>
+  </div>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container heroGrid">
+        <div class="reveal">
+          <div class="badge"><span class="dot" aria-hidden="true"></span><span>Show profesional para fiestas, eventos y escenarios</span></div>
+
+          <h1><span class="gradText">Experiencia</span><br/>tipo <span class="gradText">festival</span></h1>
+
+          <p class="sub">
+            <strong>Grupo One Love</strong> es un show visual y potente con repertorio amplio:
+            pop/rock español, clásicos internacionales, latino, pachanga y temazos para que la pista no pare.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="#contratacion">Pedir disponibilidad</a>
+            <a class="btn" href="#video">Ver vídeo</a>
+            <a class="btn" href="#galeria">Ver galería</a>
+          </div>
+        </div>
+
+        <div class="heroCards reveal" style="transition-delay:.08s">
+          <div class="card">
+            <div class="kpiRow">
+              <div class="kpi"><strong>+100%</strong><span>Energía en pista<br/>y dinamismo</span></div>
+              <div class="kpi"><strong>Full mix</strong><span>Éxitos de todas las épocas<br/>y estilos</span></div>
+            </div>
+            <div class="miniList">
+              <span class="pill">Diseño de show</span>
+              <span class="pill">Repertorio amplio</span>
+              <span class="pill">Imagen pro</span>
+              <span class="pill">Contratación rápida</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="note" style="margin:0">
+              Dinos <b>fecha + localidad + tipo de evento</b> y te pasamos disponibilidad y propuesta.
+            </p>
+            <div style="height:10px"></div>
+            <a class="btn btnPrimary" href="https://wa.me/34634352905" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrollHint" aria-hidden="true">
+        <div class="mouse"></div><span>Desliza para ver más</span>
+      </div>
+    </section>
+
+    <section id="show">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Show</h2>
+            <p>Estructura premium, potente y clara para que el cliente entienda tu valor en 10 segundos.</p>
+          </div>
+          <a class="btn" href="#contratacion">Contratar</a>
+        </div>
+
+        <div class="grid2">
+          <div class="panel reveal">
+            <div class="panelPad">
+              <div class="featList">
+                <div class="feat"><i>★</i><div><b>Repertorio festival</b><small>Pop/rock español + internacional + bloque latino/pachanga.</small></div></div>
+                <div class="feat"><i>⚡</i><div><b>Ritmo sin pausas</b><small>Transiciones ágiles, dinámica y animación para mantener la energía.</small></div></div>
+                <div class="feat"><i>🎛</i><div><b>Sonido cuidado</b><small>Nivel pro: limpio, potente y agradable.</small></div></div>
+                <div class="feat"><i>✨</i><div><b>Imagen premium</b><small>Look oscuro y visual tipo festival.</small></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="transition-delay:.06s">
+            <div class="panelPad">
+              <div class="featList">
+                <div class="feat"><i>✓</i><div><b>Planificación</b><small>Coordinación previa: horarios, montaje y enfoque musical.</small></div></div>
+                <div class="feat"><i>✓</i><div><b>Show principal</b><small>Actuación según formato acordado.</small></div></div>
+                <div class="feat"><i>✓</i><div><b>Opciones extra</b><small>Más horas, remember, bloque latino, etc.</small></div></div>
+                <div class="feat"><i>✓</i><div><b>Factura/recibo</b><small>Documentación para empresas, asociaciones y ayuntamientos.</small></div></div>
+              </div>
+              <div style="height:10px"></div>
+              <p class="note" style="margin:0">Siguiente paso: subimos 5 fotos reales y la galería queda espectacular.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Galería</h2>
+            <p>Haz clic en cualquier foto para verla en grande. De momento repetimos la misma (luego la cambiamos por fotos reales).</p>
+          </div>
+        </div>
+
+        <div class="gallery reveal" id="gallery">
+          <div class="gItem span8" data-img="assetsstage.jpg" data-title="Escenario" data-sub="Ambiente festival">
+            <img src="assetsstage.jpg" alt="Escenario Grupo One Love">
+            <div class="gCap"><div><b>Escenario</b><br><span>Ambiente festival</span></div><span>Ver</span></div>
+          </div>
+
+          <div class="gItem span4" data-img="assetsstage.jpg" data-title="Público" data-sub="Energía en pista">
+            <img src="assetsstage.jpg" alt="Público Grupo One Love">
+            <div class="gCap"><div><b>Público</b><br><span>Energía en pista</span></div><span>Ver</span></div>
+          </div>
+
+          <div class="gItem span4" data-img="assetsstage.jpg" data-title="Show" data-sub="Momento top">
+            <img src="assetsstage.jpg" alt="Show Grupo One Love">
+            <div class="gCap"><div><b>Show</b><br><span>Momento top</span></div><span>Ver</span></div>
+          </div>
+
+          <div class="gItem span4" data-img="assetsstage.jpg" data-title="Fiesta" data-sub="Baile asegurado">
+            <img src="assetsstage.jpg" alt="Fiesta Grupo One Love">
+            <div class="gCap"><div><b>Fiesta</b><br><span>Baile asegurado</span></div><span>Ver</span></div>
+          </div>
+
+          <div class="gItem span4" data-img="assetsstage.jpg" data-title="Escena" data-sub="Look premium">
+            <img src="assetsstage.jpg" alt="Escena Grupo One Love">
+            <div class="gCap"><div><b>Escena</b><br><span>Look premium</span></div><span>Ver</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Vídeo</h2>
+            <p>Cuando tengas tu vídeo, cambia solo el ID donde pone <b>XXXXXXXXXXX</b>.</p>
+          </div>
+        </div>
+
+        <div class="videoWrap reveal">
+          <div class="ratio">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/XXXXXXXXXXX?rel=0&modestbranding=1"
+              title="Grupo One Love — Vídeo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contratacion">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Contratación</h2>
+            <p>Rellena el formulario y se abre WhatsApp con el mensaje preparado (gratis, sin servidores).</p>
+          </div>
+          <a class="btn btnPrimary" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp directo</a>
+        </div>
+
+        <div class="bookingGrid">
+          <div class="panel reveal">
+            <div class="panelPad">
+              <form class="form" id="bookingForm">
+                <div class="formRow">
+                  <div class="field">
+                    <label for="name">Nombre</label>
+                    <input id="name" type="text" placeholder="Tu nombre" autocomplete="name" />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Teléfono</label>
+                    <input id="phone" type="tel" placeholder="+34..." autocomplete="tel" />
+                  </div>
+                </div>
+
+                <div class="formRow">
+                  <div class="field">
+                    <label for="date">Fecha del evento</label>
+                    <input id="date" type="text" placeholder="Ej: 08/08/2026" />
+                  </div>
+                  <div class="field">
+                    <label for="place">Localidad</label>
+                    <input id="place" type="text" placeholder="Ej: Vinaròs / Benicarló..." />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="type">Tipo de evento</label>
+                  <input id="type" type="text" placeholder="Boda / Fiesta / Ayuntamiento / Empresa..." />
+                </div>
+
+                <div class="field">
+                  <label for="msg">Detalles</label>
+                  <textarea id="msg" placeholder="Horario, lugar, público, duración…"></textarea>
+                </div>
+
+                <button class="btn btnPrimary" type="submit">Enviar por WhatsApp</button>
+                <p class="note" style="margin:0">No se guardan datos en la web. Solo se abre WhatsApp con el texto.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="transition-delay:.06s">
+            <div class="panelPad">
+              <div class="featList">
+                <div class="feat"><i>☎</i><div><b>WhatsApp</b><small><a href="https://wa.me/34634352905" target="_blank" rel="noopener">+34 634 352 905</a></small></div></div>
+                <div class="feat"><i>📍</i><div><b>Zona</b><small>Castellón / Tarragona / Valencia (y alrededores)</small></div></div>
+                <div class="feat"><i>🧾</i><div><b>Factura</b><small>Para empresas, asociaciones y ayuntamientos</small></div></div>
+                <div class="feat"><i>⏱</i><div><b>Respuesta</b><small>Normalmente en el mismo día</small></div></div>
+              </div>
+              <div style="height:10px"></div>
+              <p class="note" style="margin:0">Siguiente mejora: subir 5 fotos reales y sustituir el vídeo por el tuyo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footGrid">
+        <div class="brandText">
+          <strong style="font-family:Oswald; letter-spacing:.6px; text-transform:uppercase;">Grupo One Love</strong>
+          <span style="color: var(--muted);">© <span id="year"></span> • Todos los derechos reservados</span>
+        </div>
+        <div class="links">
+          <a href="#inicio">Inicio</a>
+          <a href="#galeria">Galería</a>
+          <a href="#video">Vídeo</a>
+          <a href="#contratacion">Contratación</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="waFloat">
+    <a class="waBtn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightboxInner">
+      <img class="lightboxImg" id="lightboxImg" alt="Imagen ampliada">
+      <div class="lightboxBar">
+        <div>
+          <b id="lightboxTitle">Foto</b>
+          <span style="color:rgba(255,255,255,.68); margin-left:8px;" id="lightboxSub">Grupo One Love</span>
+        </div>
+        <button class="xBtn" id="lightboxClose" type="button">Cerrar ✕</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Header scroll
+    const header = document.getElementById("siteHeader");
+    const onScroll = () => {
+      if (window.scrollY > 10) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    // Menú móvil
+    const menuBtn = document.getElementById("menuBtn");
+    const menuSheet = document.getElementById("menuSheet");
+    menuBtn?.addEventListener("click", () => menuSheet.classList.toggle("open"));
+    document.querySelectorAll(".mLink").forEach(l => l.addEventListener("click", () => menuSheet.classList.remove("open")));
+
+    // Reveal animaciones
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) if (entry.isIntersecting) entry.target.classList.add("in");
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    // Año
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Formulario a WhatsApp
+    const WHATSAPP_NUMBER = "34634352905";
+    const WHATSAPP_URL = "https://wa.me/" + WHATSAPP_NUMBER;
+
+    const form = document.getElementById("bookingForm");
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = (document.getElementById("name").value || "").trim();
+      const phone = (document.getElementById("phone").value || "").trim();
+      const date = (document.getElementById("date").value || "").trim();
+      const place = (document.getElementById("place").value || "").trim();
+      const type = (document.getElementById("type").value || "").trim();
+      const msg  = (document.getElementById("msg").value || "").trim();
+
+      const lines = [
+        "Hola 👋 Soy " + (name || "___") + ". Quiero información para contratar a *Grupo One Love*.",
+        "",
+        "📅 Fecha: " + (date || "___"),
+        "📍 Localidad: " + (place || "___"),
+        "🎉 Tipo de evento: " + (type || "___"),
+        "☎️ Teléfono: " + (phone || "___"),
+        "",
+        "📝 Detalles:",
+        (msg || "___"),
+      ];
+      window.open(WHATSAPP_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+    });
+
+    // Lightbox galería
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxSub = document.getElementById("lightboxSub");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function openLightbox(src, title, sub){
+      lightboxImg.src = src;
+      lightboxTitle.textContent = title || "Foto";
+      lightboxSub.textContent = sub || "";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function closeLightbox(){
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      lightboxImg.src = "";
+    }
+
+    document.querySelectorAll(".gItem").forEach(item => {
+      item.addEventListener("click", () => {
+        openLightbox(
+          item.getAttribute("data-img") || "assetsstage.jpg",
+          item.getAttribute("data-title") || "Foto",
+          item.getAttribute("data-sub") || ""
+        );
+      });
+    });
+
+    lightboxClose?.addEventListener("click", closeLightbox);
+    lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+  </script>
 </body>
 </html>
