@@ -1,70 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grupo One Love – Show Festival</title>
 
-<title>Grupo One Love - Espectáculos musicales</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
 
 <style>
 
+:root{
+--bg:#07080c;
+--txt:white;
+--muted:#bbbbbb;
+--accent:#ff0055;
+--accent2:#8a2be2;
+}
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#0a0a0a;
+font-family:Montserrat;
+background:#07080c;
 color:white;
-overflow-x:hidden;
 }
 
 header{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url("https://images.unsplash.com/photo-1506157786151-b8491531f063");
-background-size:cover;
-background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1506157786151-b8491531f063");
+background-size:cover;
+background-position:center;
 }
 
-header h1{
+h1{
 font-size:60px;
 margin:0;
-animation:fadeIn 2s ease;
 }
 
-header p{
-font-size:22px;
-margin-top:10px;
-color:#ccc;
-animation:fadeIn 3s ease;
+p{
+color:var(--muted);
 }
 
 .btn{
 margin-top:20px;
 padding:15px 30px;
-background:#ff0055;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+border:none;
+border-radius:30px;
 color:white;
+font-weight:bold;
 text-decoration:none;
-border-radius:5px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#ff3377;
 }
 
 section{
-padding:80px 20px;
+padding:60px 20px;
 max-width:1000px;
 margin:auto;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
 }
 
 .cards{
@@ -76,52 +73,42 @@ gap:20px;
 .card{
 background:#111;
 padding:20px;
-border-radius:10px;
-transition:0.3s;
+border-radius:15px;
 }
 
-.card:hover{
-transform:translateY(-5px);
-background:#1a1a1a;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
 }
 
 footer{
 text-align:center;
-padding:40px;
-background:#000;
+padding:30px;
 color:#777;
 }
 
-/* WhatsApp Button */
+/* WhatsApp */
 
-.whatsapp-btn{
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
-color:white;
-font-size:30px;
 width:60px;
 height:60px;
 border-radius:50%;
+background:#25D366;
 display:flex;
 align-items:center;
 justify-content:center;
+font-size:30px;
 text-decoration:none;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-transition:0.3s;
-z-index:1000;
-}
-
-.whatsapp-btn:hover{
-transform:scale(1.1);
-}
-
-/* Animación */
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+color:white;
 }
 
 </style>
@@ -133,7 +120,7 @@ to{opacity:1;transform:translateY(0);}
 
 <h1>GRUPO ONE LOVE</h1>
 
-<p>Espectáculos musicales para todo tipo de eventos</p>
+<p>Espectáculos musicales profesionales</p>
 
 <a href="#contacto" class="btn">Solicitar presupuesto</a>
 
@@ -141,23 +128,23 @@ to{opacity:1;transform:translateY(0);}
 
 <section>
 
-<h2>Nuestros formatos</h2>
+<h2>Formatos</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Dúo</h3>
-<p>Perfecto para bodas, restaurantes y eventos privados.</p>
+<p>Ideal para eventos privados</p>
 </div>
 
 <div class="card">
 <h3>Trío</h3>
-<p>Mayor presencia escénica y energía.</p>
+<p>Más potencia escénica</p>
 </div>
 
 <div class="card">
 <h3>Grupo completo</h3>
-<p>Formato festival con máxima potencia.</p>
+<p>Formato festival profesional</p>
 </div>
 
 </div>
@@ -166,25 +153,15 @@ to{opacity:1;transform:translateY(0);}
 
 <section>
 
-<h2>Por qué elegirnos</h2>
+<h2>Galería</h2>
 
-<div class="cards">
+<div class="gallery">
 
-<div class="card">
-Más de 10 años de experiencia
-</div>
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a">
 
-<div class="card">
-Equipo profesional propio
-</div>
+<img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7">
 
-<div class="card">
-Repertorio variado
-</div>
-
-<div class="card">
-Seriedad y profesionalidad
-</div>
+<img src="https://images.unsplash.com/photo-1486551937199-baf066858de7">
 
 </div>
 
@@ -192,25 +169,19 @@ Seriedad y profesionalidad
 
 <section id="contacto">
 
-<h2>Contacto</h2>
+<h2>Contratación</h2>
 
-<p style="text-align:center;">
-Haz clic en el botón de WhatsApp para contratar.
-</p>
+<p>Haz clic en el botón de WhatsApp para contratar.</p>
 
 </section>
 
 <footer>
 
-© 2026 Grupo One Love
+© Grupo One Love
 
 </footer>
 
-<!-- BOTÓN WHATSAPP -->
-
-<a href="https://wa.me/34634352905" class="whatsapp-btn" target="_blank">
-💬
-</a>
+<a href="https://wa.me/34634352905" class="whatsapp">💬</a>
 
 </body>
 </html>
