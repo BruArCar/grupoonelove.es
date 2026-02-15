@@ -426,7 +426,7 @@
     .feat b{ display:block; font-size: 13px; }
     .feat small{ display:block; color: var(--muted); font-size: 12px; line-height: 1.55; margin-top:2px; }
 
-    /* NUEVO: Repertorio */
+    /* Repertorio */
     .reperGrid{
       display:grid;
       grid-template-columns: 1.1fr .9fr;
@@ -479,7 +479,7 @@
     .repItem b{ display:block; font-size: 13px; }
     .repItem small{ display:block; color: var(--muted); font-size: 12px; line-height:1.6; margin-top:2px; }
 
-    /* NUEVO: Packs */
+    /* Packs */
     .packsGrid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -573,6 +573,123 @@
       background: rgba(0,0,0,.35);
       backdrop-filter: blur(12px);
       box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+
+    /* NUEVO: Testimonios + Redes */
+    .triGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .testGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .quote{
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      padding: 14px 14px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
+      position:relative;
+      overflow:hidden;
+    }
+    .quote:before{
+      content:"“";
+      position:absolute;
+      right:12px;
+      top:-18px;
+      font-family: Oswald, Inter, system-ui;
+      font-size: 86px;
+      color: rgba(255,255,255,.08);
+      line-height:1;
+      pointer-events:none;
+    }
+    .quote p{
+      margin:0 0 10px;
+      color: rgba(255,255,255,.88);
+      font-size: 13px;
+      line-height:1.7;
+    }
+    .quote .who{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+    }
+    .stars{
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+
+    .socials{
+      display:grid;
+      gap:10px;
+      margin-top: 8px;
+    }
+    .social{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding: 12px 12px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease);
+    }
+    .social:hover{
+      transform: translateY(-1px);
+      border-color: rgba(255,255,255,.18);
+      background: rgba(0,0,0,.22);
+    }
+    .socialL{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 0;
+    }
+    .socialIcon{
+      width:40px; height:40px;
+      border-radius: 16px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(255,45,170,.16));
+      font-weight: 900;
+    }
+    .socialTxt{
+      min-width:0;
+    }
+    .socialTxt b{
+      display:block;
+      font-size: 13px;
+    }
+    .socialTxt small{
+      display:block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height:1.35;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+      max-width: 36ch;
+    }
+    .go{
+      font-weight: 900;
+      color: rgba(255,255,255,.85);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      padding: 10px 12px;
+      border-radius: 14px;
+      white-space:nowrap;
     }
 
     /* Galería */
@@ -687,6 +804,10 @@
       right: 18px;
       bottom: 18px;
       z-index: 1200;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-end;
     }
     .waBtn{
       display:inline-flex;
@@ -706,6 +827,36 @@
       transform: translateY(-1px) scale(1.01);
       background: rgba(0,0,0,.48);
       border-color: rgba(255,255,255,.20);
+    }
+
+    /* NUEVO: Volver arriba */
+    .toTop{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 48px;
+      height: 48px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.38);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 70px rgba(0,0,0,.35);
+      cursor:pointer;
+      opacity:0;
+      transform: translateY(8px);
+      pointer-events:none;
+      transition: opacity .2s var(--ease), transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+      user-select:none;
+    }
+    .toTop.show{
+      opacity:1;
+      transform: translateY(0);
+      pointer-events:auto;
+    }
+    .toTop:hover{
+      background: rgba(0,0,0,.48);
+      border-color: rgba(255,255,255,.20);
+      transform: translateY(-1px);
     }
 
     /* Lightbox (zoom galería) */
@@ -779,6 +930,8 @@
       .reperGrid{ grid-template-columns: 1fr; }
       .packsGrid{ grid-template-columns: 1fr; }
       .packFeatured{ transform:none; }
+      .triGrid{ grid-template-columns: 1fr; }
+      .testGrid{ grid-template-columns: 1fr; }
     }
     @media (max-width: 560px){
       .span4{ grid-column: span 12; }
@@ -807,6 +960,8 @@
           <li><a href="#show">Show</a></li>
           <li><a href="#repertorio">Repertorio</a></li>
           <li><a href="#packs">Packs</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#redes">Redes</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#video">Vídeo</a></li>
           <li><a href="#contratacion">Contratación</a></li>
@@ -826,6 +981,8 @@
       <a href="#show" class="mLink">Show</a>
       <a href="#repertorio" class="mLink">Repertorio</a>
       <a href="#packs" class="mLink">Packs</a>
+      <a href="#opiniones" class="mLink">Opiniones</a>
+      <a href="#redes" class="mLink">Redes</a>
       <a href="#galeria" class="mLink">Galería</a>
       <a href="#video" class="mLink">Vídeo</a>
       <a href="#contratacion" class="mLink">Contratación</a>
@@ -919,7 +1076,6 @@
       </div>
     </section>
 
-    <!-- NUEVO: Repertorio -->
     <section id="repertorio">
       <div class="container">
         <div class="sectionHead reveal">
@@ -971,7 +1127,6 @@
       </div>
     </section>
 
-    <!-- NUEVO: Packs -->
     <section id="packs">
       <div class="container">
         <div class="sectionHead reveal">
@@ -1047,6 +1202,100 @@
 
         <div style="height:14px"></div>
         <p class="note reveal" style="margin:0">* Los packs son orientativos. Ajustamos según localidad, horario y necesidades del evento.</p>
+      </div>
+    </section>
+
+    <!-- NUEVO: Opiniones + Redes -->
+    <section id="opiniones">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Opiniones</h2>
+            <p>Lo que dicen de nosotros después del bolo. (Se puede cambiar por testimonios reales cuando quieras.)</p>
+          </div>
+          <a class="btn" href="#contratacion">Quiero fecha</a>
+        </div>
+
+        <div class="triGrid">
+          <div class="panel reveal">
+            <div class="panelPad">
+              <div class="badge" style="margin-bottom:12px;">
+                <span class="dot" aria-hidden="true"></span>
+                <span>Experiencia “festival” en eventos reales</span>
+              </div>
+
+              <div class="testGrid">
+                <div class="quote">
+                  <p>“La pista no paró en toda la noche. Sonido perfecto y temazos uno detrás de otro.”</p>
+                  <div class="who"><span>Fiesta privada • Castellón</span><span class="stars">★★★★★</span></div>
+                </div>
+                <div class="quote">
+                  <p>“Muy profesionales, coordinamos todo por WhatsApp y salió redondo. Repetiremos.”</p>
+                  <div class="who"><span>Empresa • Valencia</span><span class="stars">★★★★★</span></div>
+                </div>
+                <div class="quote">
+                  <p>“Repertorio súper variado. Gustó a jóvenes y mayores, y el final fue brutal.”</p>
+                  <div class="who"><span>Asociación • Tarragona</span><span class="stars">★★★★★</span></div>
+                </div>
+                <div class="quote">
+                  <p>“Un show con imagen y energía. Se nota que cuidan el detalle y el ritmo.”</p>
+                  <div class="who"><span>Evento local • Vinaròs</span><span class="stars">★★★★★</span></div>
+                </div>
+              </div>
+
+              <div style="height:10px"></div>
+              <p class="note" style="margin:0">Cuando me pases 4–6 testimonios reales (texto + lugar), los sustituyo tal cual.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="transition-delay:.06s" id="redes">
+            <div class="panelPad">
+              <h3 style="margin:0; font-family:Oswald; letter-spacing:.7px; text-transform:uppercase;">Redes</h3>
+              <p class="note" style="margin:8px 0 0;">Síguenos y mira clips del show, momentos y vídeos.</p>
+
+              <div class="socials" style="margin-top:12px;">
+                <!-- IMPORTANTE: cambia los href por tus enlaces reales -->
+                <a class="social" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+                  <div class="socialL">
+                    <div class="socialIcon">♪</div>
+                    <div class="socialTxt">
+                      <b>TikTok</b>
+                      <small>Pon aquí tu enlace de TikTok</small>
+                    </div>
+                  </div>
+                  <span class="go">Ver ↗</span>
+                </a>
+
+                <a class="social" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+                  <div class="socialL">
+                    <div class="socialIcon">⌁</div>
+                    <div class="socialTxt">
+                      <b>Instagram</b>
+                      <small>Pon aquí tu enlace de Instagram</small>
+                    </div>
+                  </div>
+                  <span class="go">Ver ↗</span>
+                </a>
+
+                <a class="social" href="https://www.youtube.com/watch?v=UuB8pnLF4Xo" target="_blank" rel="noopener" aria-label="YouTube">
+                  <div class="socialL">
+                    <div class="socialIcon">▶</div>
+                    <div class="socialTxt">
+                      <b>YouTube</b>
+                      <small>Ver vídeo completo (canal / playlist)</small>
+                    </div>
+                  </div>
+                  <span class="go">Ver ↗</span>
+                </a>
+              </div>
+
+              <div style="height:10px"></div>
+              <a class="btn btnPrimary" href="#contratacion">Pedir disponibilidad</a>
+              <div style="height:10px"></div>
+              <p class="note" style="margin:0">Si me pasas tus 2 enlaces (TikTok + Instagram), los dejo ya puestos.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1194,6 +1443,7 @@
   </main>
 
   <div class="waFloat">
+    <button class="toTop" id="toTop" type="button" aria-label="Volver arriba">↑</button>
     <a class="waBtn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
@@ -1236,6 +1486,17 @@
     // Año
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Volver arriba
+    const toTop = document.getElementById("toTop");
+    const onTopToggle = () => {
+      if (!toTop) return;
+      if (window.scrollY > 600) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    };
+    window.addEventListener("scroll", onTopToggle, { passive: true });
+    onTopToggle();
+    toTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
     // Formulario a WhatsApp
     const WHATSAPP_NUMBER = "34634352905";
     const WHATSAPP_URL = "https://wa.me/" + WHATSAPP_NUMBER;
@@ -1268,26 +1529,24 @@
       window.open(WHATSAPP_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
     });
 
-    // NUEVO: seleccionar pack y bajar a contratación
+    // Seleccionar pack y bajar a contratación
     document.querySelectorAll("[data-pack]").forEach(btn => {
       btn.addEventListener("click", () => {
         const pack = btn.getAttribute("data-pack") || "";
         const formEl = document.getElementById("bookingForm");
         formEl?.setAttribute("data-selected-pack", pack);
 
-        // Pequeño feedback visual en el placeholder del mensaje si está vacío
         const msgEl = document.getElementById("msg");
         if (msgEl && !msgEl.value.trim()) {
           msgEl.value = "Me interesa el pack " + pack + ".\n\n";
         }
 
-        // Ir a contratación
         const target = document.getElementById("contratacion");
         if (target) target.scrollIntoView({ behavior: "smooth" });
       });
     });
 
-    // NUEVO: Repertorio por estilos (data)
+    // Repertorio por estilos (data)
     const REP_DATA = {
       fiesta: {
         title: "Fiesta total",
