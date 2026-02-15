@@ -234,16 +234,37 @@
         url("assetsstage.jpg") center/cover no-repeat;
       filter: saturate(1.18) contrast(1.12);
       transform: scale(1.03);
-      z-index:-2;
+      z-index:-3;
     }
+
+    /* Spotlight / focos premium (muy suave) */
     .hero::after{
       content:"";
-      position:absolute; inset:-20%;
+      position:absolute; inset:-25%;
       background:
-        radial-gradient(520px 320px at 18% 20%, rgba(34,211,238,.20), transparent 60%),
-        radial-gradient(540px 340px at 82% 25%, rgba(255,45,170,.20), transparent 60%),
-        radial-gradient(720px 420px at 50% 78%, rgba(167,139,250,.10), transparent 65%);
+        radial-gradient(520px 360px at 18% 18%, rgba(34,211,238,.18), transparent 60%),
+        radial-gradient(560px 380px at 82% 22%, rgba(255,45,170,.18), transparent 60%),
+        radial-gradient(760px 460px at 50% 78%, rgba(167,139,250,.10), transparent 65%);
+      z-index:-2;
+    }
+    .spotlight{
+      position:absolute;
+      inset:-30%;
       z-index:-1;
+      pointer-events:none;
+      opacity:.55;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(700px 420px at 20% 30%, rgba(34,211,238,.18), transparent 62%),
+        radial-gradient(760px 440px at 80% 35%, rgba(255,45,170,.16), transparent 64%),
+        radial-gradient(900px 520px at 55% 80%, rgba(167,139,250,.12), transparent 68%);
+      filter: blur(2px);
+      animation: spotmove 12s var(--ease) infinite alternate;
+    }
+    @keyframes spotmove{
+      0%   { transform: translate3d(-2%, -1%, 0) scale(1.01); opacity:.48; }
+      50%  { transform: translate3d(2%, 1%, 0) scale(1.02); opacity:.58; }
+      100% { transform: translate3d(-1%, 2%, 0) scale(1.03); opacity:.52; }
     }
 
     .heroGrid{
@@ -252,6 +273,15 @@
       gap: 26px;
       align-items:end;
       padding: 46px 0 34px;
+    }
+
+    /* Entrada cinematográfica */
+    .heroIntro{
+      animation: heroIn .9s var(--ease) both;
+    }
+    @keyframes heroIn{
+      0% { opacity:0; transform: translateY(14px); filter: blur(2px); }
+      100% { opacity:1; transform: translateY(0); filter: blur(0); }
     }
 
     .badge{
@@ -295,9 +325,7 @@
       line-height: 1.8;
       max-width: 62ch;
     }
-    .heroKick b{
-      color: rgba(255,255,255,.95);
-    }
+    .heroKick b{ color: rgba(255,255,255,.95); }
 
     .sub{
       max-width: 62ch;
@@ -703,6 +731,88 @@
       white-space:nowrap;
     }
 
+    /* Eventos y clientes (confianza) */
+    .clientsGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .clientCards{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .cCard{
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      padding: 14px 14px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .cIcon{
+      width:42px; height:42px;
+      border-radius: 16px;
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+    .cTxt b{ display:block; font-size: 13px; }
+    .cTxt small{ display:block; color: var(--muted); font-size: 12px; line-height:1.55; margin-top:2px; }
+
+    .marqueeWrap{
+      border-radius: var(--r);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .marqueeTop{
+      padding: 14px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .marqueeTop .hint{
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+      line-height:1.5;
+    }
+    .marquee{
+      overflow:hidden;
+      padding: 14px 14px;
+    }
+    .marqTrack{
+      display:flex;
+      gap: 10px;
+      width:max-content;
+      animation: marq 22s linear infinite;
+      will-change: transform;
+    }
+    .marqChip{
+      font-size: 12px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.86);
+      white-space:nowrap;
+    }
+    @keyframes marq{
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marqueeWrap:hover .marqTrack{ animation-play-state: paused; }
+
     /* Galería carrusel premium */
     .carouselWrap{
       border-radius: var(--r);
@@ -922,7 +1032,7 @@
       transform: translateY(-1px);
     }
 
-    /* Lightbox (zoom galería) */
+    /* Lightbox */
     .lightbox{
       position:fixed; inset:0;
       background: rgba(0,0,0,.82);
@@ -992,6 +1102,8 @@
       .packFeatured{ transform:none; }
       .triGrid{ grid-template-columns: 1fr; }
       .testGrid{ grid-template-columns: 1fr; }
+      .clientsGrid{ grid-template-columns: 1fr; }
+      .clientCards{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1016,6 +1128,7 @@
           <li><a href="#repertorio">Repertorio</a></li>
           <li><a href="#packs">Packs</a></li>
           <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#eventos">Eventos</a></li>
           <li><a href="#redes">Redes</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#video">Vídeo</a></li>
@@ -1037,6 +1150,7 @@
       <a href="#repertorio" class="mLink">Repertorio</a>
       <a href="#packs" class="mLink">Packs</a>
       <a href="#opiniones" class="mLink">Opiniones</a>
+      <a href="#eventos" class="mLink">Eventos</a>
       <a href="#redes" class="mLink">Redes</a>
       <a href="#galeria" class="mLink">Galería</a>
       <a href="#video" class="mLink">Vídeo</a>
@@ -1046,11 +1160,12 @@
 
   <main id="inicio">
     <section class="hero">
-      <div class="container heroGrid">
+      <div class="spotlight" aria-hidden="true"></div>
+
+      <div class="container heroGrid heroIntro">
         <div class="reveal">
           <div class="badge"><span class="dot" aria-hidden="true"></span><span>Show profesional para fiestas, eventos y escenarios</span></div>
 
-          <!-- TÍTULO MÁS ÉPICO -->
           <h1><span class="gradText">SHOW</span><br/>de <span class="gradText">ALTO VOLTAJE</span></h1>
 
           <p class="heroKick">
@@ -1355,7 +1470,125 @@
       </div>
     </section>
 
-    <!-- GALERÍA NUEVA EN CARRUSEL -->
+    <!-- NUEVA SECCIÓN: EVENTOS Y CLIENTES -->
+    <section id="eventos">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Eventos y clientes</h2>
+            <p>Perfecto para ayuntamientos, hoteles, bodas y empresas. Confianza rápida: organización, sonido y ritmo.</p>
+          </div>
+          <a class="btn btnPrimary" href="#contratacion">Reservar fecha</a>
+        </div>
+
+        <div class="clientsGrid">
+          <div class="panel reveal">
+            <div class="panelPad">
+              <div class="badge" style="margin-bottom:12px;">
+                <span class="dot" aria-hidden="true"></span>
+                <span>¿Para qué tipo de evento nos contratan?</span>
+              </div>
+
+              <div class="clientCards">
+                <div class="cCard">
+                  <div class="cIcon">🏛</div>
+                  <div class="cTxt">
+                    <b>Ayuntamientos</b>
+                    <small>Fiestas patronales, verbenas, eventos culturales y escenarios.</small>
+                  </div>
+                </div>
+                <div class="cCard">
+                  <div class="cIcon">🏨</div>
+                  <div class="cTxt">
+                    <b>Hoteles</b>
+                    <small>Cenas, baile, eventos de temporada y animación.</small>
+                  </div>
+                </div>
+                <div class="cCard">
+                  <div class="cIcon">💍</div>
+                  <div class="cTxt">
+                    <b>Bodas</b>
+                    <small>Momentos clave + fiesta final con temazos.</small>
+                  </div>
+                </div>
+                <div class="cCard">
+                  <div class="cIcon">🏢</div>
+                  <div class="cTxt">
+                    <b>Empresas</b>
+                    <small>Eventos corporativos, celebraciones y team building.</small>
+                  </div>
+                </div>
+                <div class="cCard">
+                  <div class="cIcon">🎉</div>
+                  <div class="cTxt">
+                    <b>Fiestas privadas</b>
+                    <small>Cumpleaños, aniversarios y eventos familiares.</small>
+                  </div>
+                </div>
+                <div class="cCard">
+                  <div class="cIcon">🧾</div>
+                  <div class="cTxt">
+                    <b>Factura / recibo</b>
+                    <small>Listo para asociaciones, empresas y administraciones.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div style="height:10px"></div>
+              <p class="note" style="margin:0">Si quieres, aquí también podemos poner <b>nombres reales</b> de sitios donde habéis tocado (sin logos).</p>
+            </div>
+          </div>
+
+          <div class="marqueeWrap reveal" style="transition-delay:.06s">
+            <div class="marqueeTop">
+              <div class="hint">
+                Banda premium de “clientes / eventos”. Queda top sin logos.
+                <br/>Si pasas el ratón por encima, se para.
+              </div>
+              <a class="btn" href="#contratacion">Pedir propuesta</a>
+            </div>
+
+            <div class="marquee" aria-label="Banda de eventos y clientes">
+              <!-- Duplicado del contenido para loop perfecto -->
+              <div class="marqTrack" id="marqTrack">
+                <span class="marqChip">Fiestas patronales</span>
+                <span class="marqChip">Cenas baile</span>
+                <span class="marqChip">Bodas</span>
+                <span class="marqChip">Hoteles</span>
+                <span class="marqChip">Empresas</span>
+                <span class="marqChip">Eventos privados</span>
+                <span class="marqChip">Asociaciones</span>
+                <span class="marqChip">Ayuntamientos</span>
+                <span class="marqChip">Verbenas</span>
+                <span class="marqChip">Remember</span>
+                <span class="marqChip">Latino / pachanga</span>
+                <span class="marqChip">Show premium</span>
+
+                <span class="marqChip">Fiestas patronales</span>
+                <span class="marqChip">Cenas baile</span>
+                <span class="marqChip">Bodas</span>
+                <span class="marqChip">Hoteles</span>
+                <span class="marqChip">Empresas</span>
+                <span class="marqChip">Eventos privados</span>
+                <span class="marqChip">Asociaciones</span>
+                <span class="marqChip">Ayuntamientos</span>
+                <span class="marqChip">Verbenas</span>
+                <span class="marqChip">Remember</span>
+                <span class="marqChip">Latino / pachanga</span>
+                <span class="marqChip">Show premium</span>
+              </div>
+            </div>
+
+            <div style="padding: 0 14px 14px;">
+              <p class="note" style="margin:0">
+                ¿Quieres hacerlo aún más “real”? Pásame 8–12 nombres de sitios (ej: “Hotel X”, “Fiestas de Y”) y los pongo como chips.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="galeria">
       <div class="container">
         <div class="sectionHead reveal">
@@ -1510,6 +1743,7 @@
         </div>
         <div class="links">
           <a href="#inicio">Inicio</a>
+          <a href="#eventos">Eventos</a>
           <a href="#galeria">Galería</a>
           <a href="#video">Vídeo</a>
           <a href="#contratacion">Contratación</a>
@@ -1718,7 +1952,7 @@
       });
     });
 
-    // Lightbox (para carrusel y futuras galerías)
+    // Lightbox
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxTitle = document.getElementById("lightboxTitle");
@@ -1744,7 +1978,7 @@
     lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
     window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
 
-    // Click para abrir lightbox (carrusel)
+    // Click lightbox (carrusel)
     document.querySelectorAll(".slide").forEach(item => {
       item.addEventListener("click", () => {
         openLightbox(
