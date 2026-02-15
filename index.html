@@ -426,6 +426,155 @@
     .feat b{ display:block; font-size: 13px; }
     .feat small{ display:block; color: var(--muted); font-size: 12px; line-height: 1.55; margin-top:2px; }
 
+    /* NUEVO: Repertorio */
+    .reperGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .chips{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; }
+    .chip{
+      font-size: 12px;
+      padding: 9px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+      cursor:pointer;
+      user-select:none;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+    }
+    .chip:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.16); }
+    .chip.active{
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(34,211,238,.22), rgba(255,45,170,.18));
+      box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 22px 70px rgba(0,0,0,.32);
+    }
+    .repList{
+      display:grid;
+      gap:10px;
+      margin-top: 14px;
+    }
+    .repItem{
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      padding: 12px 12px;
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .repItem i{
+      width:36px; height:36px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.12);
+      font-style: normal;
+      font-weight: 900;
+      color: rgba(255,255,255,.92);
+      flex: 0 0 auto;
+    }
+    .repItem b{ display:block; font-size: 13px; }
+    .repItem small{ display:block; color: var(--muted); font-size: 12px; line-height:1.6; margin-top:2px; }
+
+    /* NUEVO: Packs */
+    .packsGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items:stretch;
+    }
+    .pack{
+      border-radius: var(--r);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height: 100%;
+    }
+    .packPad{ padding: 20px 20px; display:flex; flex-direction:column; gap:12px; height:100%; }
+    .packName{
+      font-family: Oswald, Inter, system-ui;
+      text-transform: uppercase;
+      letter-spacing:.7px;
+      font-size: 22px;
+      line-height:1;
+      margin:0;
+    }
+    .packTag{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      color: rgba(255,255,255,.88);
+      font-size: 12px;
+      width: fit-content;
+    }
+    .packTag .miniDot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(135deg, var(--a2), var(--a1));
+      box-shadow: 0 0 16px rgba(34,211,238,.18), 0 0 16px rgba(255,45,170,.18);
+    }
+    .packList{ display:grid; gap:10px; margin: 6px 0 2px; }
+    .packFeat{
+      display:flex;
+      gap:10px;
+      padding: 10px 10px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      align-items:flex-start;
+    }
+    .packFeat i{
+      width:28px; height:28px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(255,45,170,.14));
+      border: 1px solid rgba(255,255,255,.12);
+      font-style: normal;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+    .packFeat span{
+      color: rgba(255,255,255,.88);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .packCtas{ display:flex; gap:10px; flex-wrap:wrap; margin-top:auto; }
+    .btnGhost{
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .packFeatured{
+      border-color: rgba(255,255,255,.18);
+      background:
+        radial-gradient(500px 260px at 20% 0%, rgba(34,211,238,.14), transparent 60%),
+        radial-gradient(520px 280px at 90% 10%, rgba(255,45,170,.14), transparent 60%),
+        rgba(255,255,255,.04);
+      box-shadow: 0 34px 110px rgba(0,0,0,.55);
+      transform: translateY(-2px);
+    }
+    .ribbon{
+      position:absolute;
+      right:14px; top:14px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+
     /* Galería */
     .gallery{
       display:grid;
@@ -627,6 +776,9 @@
       .span4{ grid-column: span 6; }
       .navRight{ min-width:auto; }
       .brand{ min-width:auto; }
+      .reperGrid{ grid-template-columns: 1fr; }
+      .packsGrid{ grid-template-columns: 1fr; }
+      .packFeatured{ transform:none; }
     }
     @media (max-width: 560px){
       .span4{ grid-column: span 12; }
@@ -653,6 +805,8 @@
       <nav aria-label="Navegación principal">
         <ul>
           <li><a href="#show">Show</a></li>
+          <li><a href="#repertorio">Repertorio</a></li>
+          <li><a href="#packs">Packs</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#video">Vídeo</a></li>
           <li><a href="#contratacion">Contratación</a></li>
@@ -670,6 +824,8 @@
   <div class="menuSheet" id="menuSheet" aria-label="Menú móvil">
     <div class="container">
       <a href="#show" class="mLink">Show</a>
+      <a href="#repertorio" class="mLink">Repertorio</a>
+      <a href="#packs" class="mLink">Packs</a>
       <a href="#galeria" class="mLink">Galería</a>
       <a href="#video" class="mLink">Vídeo</a>
       <a href="#contratacion" class="mLink">Contratación</a>
@@ -760,6 +916,137 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- NUEVO: Repertorio -->
+    <section id="repertorio">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Repertorio por estilos</h2>
+            <p>Selección por bloques para adaptar el show al público. (Ejemplos orientativos: se ajusta según evento.)</p>
+          </div>
+          <a class="btn" href="#contratacion">Pedir propuesta</a>
+        </div>
+
+        <div class="reperGrid">
+          <div class="panel reveal">
+            <div class="panelPad">
+              <div class="badge" style="margin-bottom:12px;">
+                <span class="dot" aria-hidden="true"></span>
+                <span>Elige un estilo y verás el enfoque</span>
+              </div>
+
+              <div class="chips" id="repChips" aria-label="Filtros de repertorio">
+                <button class="chip active" type="button" data-cat="fiesta">Fiesta total</button>
+                <button class="chip" type="button" data-cat="poprockes">Pop/Rock español</button>
+                <button class="chip" type="button" data-cat="internacionales">Internacionales</button>
+                <button class="chip" type="button" data-cat="latino">Latino / pachanga</button>
+                <button class="chip" type="button" data-cat="remember">Remember / 80-90</button>
+                <button class="chip" type="button" data-cat="bodas">Bodas (momentos)</button>
+              </div>
+
+              <div class="repList" id="repList" aria-live="polite" style="margin-top:14px;"></div>
+
+              <div style="height:10px"></div>
+              <p class="note" style="margin:0">Tip: si nos dices <b>edad media</b> y <b>estilo</b>, ajustamos el set al 100%.</p>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="transition-delay:.06s">
+            <div class="panelPad">
+              <div class="featList">
+                <div class="feat"><i>🎯</i><div><b>Adaptación real</b><small>Cada evento es distinto: se ajustan bloques y tempos.</small></div></div>
+                <div class="feat"><i>🧩</i><div><b>Bloques inteligentes</b><small>Subidas progresivas + “temazos” en puntos clave.</small></div></div>
+                <div class="feat"><i>🕺</i><div><b>Pista siempre arriba</b><small>Transiciones y dinámica para no “cortar” la energía.</small></div></div>
+                <div class="feat"><i>📌</i><div><b>Peticiones</b><small>Podemos incluir 2–3 temas “imprescindibles” del cliente.</small></div></div>
+              </div>
+
+              <div style="height:10px"></div>
+              <a class="btn btnPrimary" href="#contratacion">Quiero un set a medida</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVO: Packs -->
+    <section id="packs">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <div>
+            <h2>Packs de contratación</h2>
+            <p>Tres opciones claras. Dinos fecha y localidad y te confirmamos disponibilidad y precio final.</p>
+          </div>
+          <a class="btn btnPrimary" href="#contratacion">Pedir disponibilidad</a>
+        </div>
+
+        <div class="packsGrid">
+          <div class="pack reveal">
+            <div class="packPad">
+              <div class="packTag"><span class="miniDot" aria-hidden="true"></span><span>Ideal para fiesta privada</span></div>
+              <h3 class="packName">Básico</h3>
+              <p class="note" style="margin:0">Una opción directa para animar y asegurar buena pista.</p>
+
+              <div class="packList">
+                <div class="packFeat"><i>✓</i><span>Show y repertorio adaptado al evento</span></div>
+                <div class="packFeat"><i>✓</i><span>Bloque fiesta + temazos por edades</span></div>
+                <div class="packFeat"><i>✓</i><span>Coordinación previa (horarios y enfoque)</span></div>
+                <div class="packFeat"><i>✓</i><span>Factura/recibo si lo necesitas</span></div>
+              </div>
+
+              <div class="packCtas">
+                <a class="btn btnGhost" href="#contratacion" data-pack="Básico">Pedir info</a>
+                <a class="btn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack packFeatured reveal" style="transition-delay:.06s">
+            <div class="ribbon">Más elegido</div>
+            <div class="packPad">
+              <div class="packTag"><span class="miniDot" aria-hidden="true"></span><span>Equilibrio perfecto</span></div>
+              <h3 class="packName">Premium</h3>
+              <p class="note" style="margin:0">Más completo, más impacto visual y experiencia “pro”.</p>
+
+              <div class="packList">
+                <div class="packFeat"><i>★</i><span>Show premium con dinámica y transiciones</span></div>
+                <div class="packFeat"><i>★</i><span>Bloques por estilos (pop/rock + internacional + latino)</span></div>
+                <div class="packFeat"><i>★</i><span>Opciones extra: remember / más horas (según evento)</span></div>
+                <div class="packFeat"><i>★</i><span>Atención rápida por WhatsApp el mismo día</span></div>
+              </div>
+
+              <div class="packCtas">
+                <a class="btn btnPrimary" href="#contratacion" data-pack="Premium">Lo quiero</a>
+                <a class="btn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack reveal" style="transition-delay:.12s">
+            <div class="packPad">
+              <div class="packTag"><span class="miniDot" aria-hidden="true"></span><span>Experiencia top</span></div>
+              <h3 class="packName">Festival</h3>
+              <p class="note" style="margin:0">Para eventos grandes donde quieres “efecto wow”.</p>
+
+              <div class="packList">
+                <div class="packFeat"><i>⚡</i><span>Enfoque “festival”: energía + momentos top</span></div>
+                <div class="packFeat"><i>⚡</i><span>Planificación detallada (timing y puntos clave)</span></div>
+                <div class="packFeat"><i>⚡</i><span>Bloques especiales: remember / latino / temáticos</span></div>
+                <div class="packFeat"><i>⚡</i><span>Prioridad de atención y coordinación</span></div>
+              </div>
+
+              <div class="packCtas">
+                <a class="btn btnGhost" href="#contratacion" data-pack="Festival">Pedir propuesta</a>
+                <a class="btn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+        <p class="note reveal" style="margin:0">* Los packs son orientativos. Ajustamos según localidad, horario y necesidades del evento.</p>
       </div>
     </section>
 
@@ -963,8 +1250,11 @@
       const type = (document.getElementById("type").value || "").trim();
       const msg  = (document.getElementById("msg").value || "").trim();
 
+      const selectedPack = (form.getAttribute("data-selected-pack") || "").trim();
+
       const lines = [
         "Hola 👋 Soy " + (name || "___") + ". Quiero información para contratar a *Grupo One Love*.",
+        (selectedPack ? ("📦 Pack: *" + selectedPack + "*") : ""),
         "",
         "📅 Fecha: " + (date || "___"),
         "📍 Localidad: " + (place || "___"),
@@ -973,8 +1263,123 @@
         "",
         "📝 Detalles:",
         (msg || "___"),
-      ];
+      ].filter(Boolean);
+
       window.open(WHATSAPP_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+    });
+
+    // NUEVO: seleccionar pack y bajar a contratación
+    document.querySelectorAll("[data-pack]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const pack = btn.getAttribute("data-pack") || "";
+        const formEl = document.getElementById("bookingForm");
+        formEl?.setAttribute("data-selected-pack", pack);
+
+        // Pequeño feedback visual en el placeholder del mensaje si está vacío
+        const msgEl = document.getElementById("msg");
+        if (msgEl && !msgEl.value.trim()) {
+          msgEl.value = "Me interesa el pack " + pack + ".\n\n";
+        }
+
+        // Ir a contratación
+        const target = document.getElementById("contratacion");
+        if (target) target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    // NUEVO: Repertorio por estilos (data)
+    const REP_DATA = {
+      fiesta: {
+        title: "Fiesta total",
+        sub: "Temazos + subidas progresivas",
+        items: [
+          { icon:"🔥", title:"Apertura potente", desc:"Entramos con hits conocidos para enganchar desde el minuto 1." },
+          { icon:"🎤", title:"Canta y baila", desc:"Bloque participativo para que la gente se venga arriba." },
+          { icon:"⚡", title:"Subidas sin cortes", desc:"Transiciones ágiles y ritmo continuo (cero bajones)." },
+          { icon:"🏁", title:"Final épico", desc:"Cierre con clásicos infalibles para terminar con la pista arriba." }
+        ]
+      },
+      poprockes: {
+        title: "Pop/Rock español",
+        sub: "Clásicos y actuales",
+        items: [
+          { icon:"🎸", title:"Éxitos de siempre", desc:"Pop/rock español para todas las edades (muy cantable)." },
+          { icon:"🕺", title:"Ritmo y guitarra", desc:"Temas con energía para saltar a la pista sin pensarlo." },
+          { icon:"🎶", title:"Medleys", desc:"Si encaja, agrupamos temas para mantener velocidad y flow." }
+        ]
+      },
+      internacionales: {
+        title: "Internacionales",
+        sub: "Hits globales",
+        items: [
+          { icon:"🌍", title:"Clásicos internacionales", desc:"Temas que conoce todo el mundo (de varias décadas)." },
+          { icon:"💃", title:"Dance/party", desc:"Bloque “arriba” para fiestas de empresa y eventos." },
+          { icon:"🎧", title:"Transiciones tipo DJ", desc:"Pasos entre temas para que no se rompa la energía." }
+        ]
+      },
+      latino: {
+        title: "Latino / pachanga",
+        sub: "Sabor y movimiento",
+        items: [
+          { icon:"🌴", title:"Pachanga", desc:"Bloque alegre y muy bailable para levantar la pista." },
+          { icon:"🥁", title:"Ritmos latinos", desc:"Cumbia/salsa/urbano latino según el público." },
+          { icon:"🕺", title:"Animación", desc:"Dinámica para que se sume la gente (sin forzar)." }
+        ]
+      },
+      remember: {
+        title: "Remember / 80-90",
+        sub: "Nostalgia que funciona",
+        items: [
+          { icon:"🕰", title:"Clásicos 80-90", desc:"Temas míticos para cantar y bailar (muy efectivos)." },
+          { icon:"✨", title:"Pop-dance", desc:"Bloque con energía que engancha a todas las edades." },
+          { icon:"🚀", title:"Subida final", desc:"Cierre con hits recordados y bailables." }
+        ]
+      },
+      bodas: {
+        title: "Bodas (momentos)",
+        sub: "Momentos clave",
+        items: [
+          { icon:"💍", title:"Momentos especiales", desc:"Entrada, sorpresas, baile y puntos clave coordinados." },
+          { icon:"🥂", title:"Canta y celebra", desc:"Bloque festivo para que familia y amigos se suelten." },
+          { icon:"🎉", title:"Fiesta final", desc:"Temazos para que la boda acabe en modo festival." }
+        ]
+      }
+    };
+
+    const repList = document.getElementById("repList");
+    const repChips = document.getElementById("repChips");
+
+    function renderRep(cat){
+      const data = REP_DATA[cat] || REP_DATA.fiesta;
+      if (!repList) return;
+      repList.innerHTML = `
+        <div class="repItem">
+          <i>🎶</i>
+          <div>
+            <b>${data.title}</b>
+            <small>${data.sub}</small>
+          </div>
+        </div>
+        ${data.items.map(it => `
+          <div class="repItem">
+            <i>${it.icon}</i>
+            <div>
+              <b>${it.title}</b>
+              <small>${it.desc}</small>
+            </div>
+          </div>
+        `).join("")}
+      `;
+    }
+
+    renderRep("fiesta");
+
+    repChips?.querySelectorAll(".chip").forEach(ch => {
+      ch.addEventListener("click", () => {
+        repChips.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+        ch.classList.add("active");
+        renderRep(ch.getAttribute("data-cat") || "fiesta");
+      });
     });
 
     // Lightbox galería
