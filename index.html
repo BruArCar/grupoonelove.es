@@ -164,7 +164,7 @@
       border:1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.04);
       color:#fff;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 13px;
       cursor:pointer;
       transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
@@ -209,7 +209,7 @@
       border:1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.03);
       margin-bottom: 10px;
-      font-weight: 800;
+      font-weight: 900;
       color: rgba(255,255,255,.92);
     }
     .menuSheet a:last-child{ margin-bottom:0; }
@@ -230,9 +230,9 @@
       content:"";
       position:absolute; inset:0;
       background:
-        linear-gradient(180deg, rgba(7,10,18,.12), rgba(7,10,18,.88) 70%, rgba(7,10,18,1)),
+        linear-gradient(180deg, rgba(7,10,18,.10), rgba(7,10,18,.86) 70%, rgba(7,10,18,1)),
         url("assetsstage.jpg") center/cover no-repeat;
-      filter: saturate(1.14) contrast(1.08);
+      filter: saturate(1.18) contrast(1.12);
       transform: scale(1.03);
       z-index:-2;
     }
@@ -248,7 +248,7 @@
 
     .heroGrid{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.12fr .88fr;
       gap: 26px;
       align-items:end;
       padding: 46px 0 34px;
@@ -274,11 +274,11 @@
     }
 
     h1{
-      margin: 18px 0 12px;
+      margin: 18px 0 10px;
       font-family: Oswald, Inter, system-ui;
-      font-size: clamp(42px, 5.4vw, 76px);
-      line-height: .95;
-      letter-spacing: .7px;
+      font-size: clamp(44px, 5.6vw, 78px);
+      line-height: .92;
+      letter-spacing: .9px;
       text-transform: uppercase;
       text-shadow: 0 10px 70px rgba(0,0,0,.60);
     }
@@ -288,9 +288,19 @@
       background-clip:text;
       color:transparent;
     }
+    .heroKick{
+      margin: 0 0 18px;
+      color: rgba(255,255,255,.85);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 62ch;
+    }
+    .heroKick b{
+      color: rgba(255,255,255,.95);
+    }
 
     .sub{
-      max-width: 60ch;
+      max-width: 62ch;
       margin: 0 0 22px;
       color: rgba(255,255,255,.84);
       font-size: 15px;
@@ -576,7 +586,7 @@
       box-shadow: 0 18px 60px rgba(0,0,0,.35);
     }
 
-    /* Testimonios + Redes */
+    /* Opiniones + Redes */
     .triGrid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -693,29 +703,83 @@
       white-space:nowrap;
     }
 
-    /* Galería */
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 12px;
+    /* Galería carrusel premium */
+    .carouselWrap{
+      border-radius: var(--r);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      overflow:hidden;
     }
-    .gItem{
+    .carouselTop{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding: 14px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+    }
+    .carouselTop .hint{
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+      line-height:1.5;
+    }
+    .carBtns{ display:flex; gap:10px; }
+    .carBtn{
+      width:44px; height:44px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color:#fff;
+      font-weight: 900;
+      cursor:pointer;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+      user-select:none;
+    }
+    .carBtn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.20);
+    }
+    .carousel{
       position:relative;
+      padding: 14px;
+    }
+    .track{
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 6px;
+    }
+    .track::-webkit-scrollbar{ height: 10px; }
+    .track::-webkit-scrollbar-thumb{
+      background: rgba(255,255,255,.10);
+      border-radius: 999px;
+      border: 2px solid rgba(0,0,0,.25);
+    }
+    .slide{
+      flex: 0 0 auto;
+      width: clamp(180px, 28vw, 300px);
+      aspect-ratio: 4 / 3;
+      scroll-snap-align: start;
       border-radius: 20px;
       overflow:hidden;
       border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      background: rgba(0,0,0,.20);
+      box-shadow: 0 18px 60px rgba(0,0,0,.28);
       cursor:pointer;
-      min-height: 170px;
+      position:relative;
       transform: translateY(0);
       transition: transform .25s var(--ease), border-color .25s var(--ease);
     }
-    .gItem:hover{
-      transform: translateY(-3px);
+    .slide:hover{
+      transform: translateY(-2px);
       border-color: rgba(255,255,255,.20);
     }
-    .gItem img{
+    .slide img{
       width:100%;
       height:100%;
       object-fit:cover;
@@ -723,25 +787,23 @@
       transform: scale(1.02);
       transition: transform .35s var(--ease);
     }
-    .gItem:hover img{ transform: scale(1.06); }
-
-    .gCap{
+    .slide:hover img{ transform: scale(1.06); }
+    .sCap{
       position:absolute;
       left:0; right:0; bottom:0;
-      padding: 12px 12px;
+      padding: 10px 10px;
       background: linear-gradient(180deg, transparent, rgba(0,0,0,.78));
       color: rgba(255,255,255,.95);
       font-size: 12px;
       display:flex;
       justify-content:space-between;
-      gap:12px;
+      gap:10px;
       align-items:flex-end;
     }
-    .gCap span{ color: rgba(255,255,255,.70); font-size: 11px; }
-
-    .span8{ grid-column: span 8; }
-    .span4{ grid-column: span 4; }
-    .span6{ grid-column: span 6; }
+    .sCap span{
+      color: rgba(255,255,255,.70);
+      font-size: 11px;
+    }
 
     /* Vídeo */
     .videoWrap{
@@ -923,9 +985,6 @@
       .grid2{ grid-template-columns: 1fr; }
       .bookingGrid{ grid-template-columns: 1fr; }
       .formRow{ grid-template-columns: 1fr; }
-      .span8{ grid-column: span 12; }
-      .span6{ grid-column: span 12; }
-      .span4{ grid-column: span 6; }
       .navRight{ min-width:auto; }
       .brand{ min-width:auto; }
       .reperGrid{ grid-template-columns: 1fr; }
@@ -933,11 +992,6 @@
       .packFeatured{ transform:none; }
       .triGrid{ grid-template-columns: 1fr; }
       .testGrid{ grid-template-columns: 1fr; }
-    }
-    @media (max-width: 560px){
-      .span4{ grid-column: span 12; }
-      .kpiRow{ grid-template-columns: 1fr; }
-      .btn{ padding: 12px 12px; }
     }
   </style>
 </head>
@@ -996,11 +1050,16 @@
         <div class="reveal">
           <div class="badge"><span class="dot" aria-hidden="true"></span><span>Show profesional para fiestas, eventos y escenarios</span></div>
 
-          <h1><span class="gradText">Experiencia</span><br/>tipo <span class="gradText">festival</span></h1>
+          <!-- TÍTULO MÁS ÉPICO -->
+          <h1><span class="gradText">SHOW</span><br/>de <span class="gradText">ALTO VOLTAJE</span></h1>
+
+          <p class="heroKick">
+            Una experiencia <b>potente, elegante y con ritmo</b> para que tu evento suba de nivel desde el primer tema.
+          </p>
 
           <p class="sub">
-            <strong>Grupo One Love</strong> es un show visual y potente con repertorio amplio:
-            pop/rock español, clásicos internacionales, latino, pachanga y temazos para que la pista no pare.
+            <strong>Grupo One Love</strong> combina imagen premium + energía en pista con repertorio amplio:
+            pop/rock español, clásicos internacionales, latino/pachanga y temazos para que no pare.
           </p>
 
           <div class="ctaRow">
@@ -1070,7 +1129,7 @@
                 <div class="feat"><i>✓</i><div><b>Factura/recibo</b><small>Documentación para empresas, asociaciones y ayuntamientos.</small></div></div>
               </div>
               <div style="height:10px"></div>
-              <p class="note" style="margin:0">Siguiente mejora: si quieres, hacemos “packs” de contratación (Básico / Premium / Festival).</p>
+              <p class="note" style="margin:0">Packs listos: Básico / Premium / Festival.</p>
             </div>
           </div>
         </div>
@@ -1276,12 +1335,12 @@
                   <span class="go">Ver ↗</span>
                 </a>
 
-                <a class="social" href="https://www.youtube.com/watch?v=UuB8pnLF4Xo" target="_blank" rel="noopener" aria-label="YouTube">
+                <a class="social" href="https://www.youtube.com/@GrupoOneLove" target="_blank" rel="noopener" aria-label="YouTube">
                   <div class="socialL">
                     <div class="socialIcon">▶</div>
                     <div class="socialTxt">
                       <b>YouTube</b>
-                      <small>Ver vídeo completo</small>
+                      <small>@GrupoOneLove</small>
                     </div>
                   </div>
                   <span class="go">Ver ↗</span>
@@ -1290,49 +1349,66 @@
 
               <div style="height:10px"></div>
               <a class="btn btnPrimary" href="#contratacion">Pedir disponibilidad</a>
-              <div style="height:10px"></div>
-              <p class="note" style="margin:0">Si quieres, también puedo poner aquí el enlace a Facebook (si lo usas) o email.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- GALERÍA NUEVA EN CARRUSEL -->
     <section id="galeria">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>Galería</h2>
-            <p>Haz clic en cualquier foto para verla en grande (zoom tipo festival).</p>
+            <p>Un carrusel premium: se ve más top y si añades más fotos no “engorda” la web.</p>
           </div>
         </div>
 
-        <div class="gallery reveal" id="gallery">
-          <div class="gItem span8" data-img="assetsstage.jpg" data-title="Escenario" data-sub="Ambiente festival">
-            <img src="assetsstage.jpg" alt="Escenario Grupo One Love">
-            <div class="gCap"><div><b>Escenario</b><br><span>Ambiente festival</span></div><span>Ver</span></div>
+        <div class="carouselWrap reveal">
+          <div class="carouselTop">
+            <div class="hint">
+              Consejo: puedes deslizar con el ratón/trackpad o usar los botones.
+              <br/>Haz clic en una imagen para verla en grande.
+            </div>
+            <div class="carBtns">
+              <button class="carBtn" type="button" id="carPrev" aria-label="Anterior">‹</button>
+              <button class="carBtn" type="button" id="carNext" aria-label="Siguiente">›</button>
+            </div>
           </div>
 
-          <div class="gItem span4" data-img="foto1.jpg" data-title="Foto 1" data-sub="Grupo One Love">
-            <img src="foto1.jpg" alt="Foto 1 Grupo One Love">
-            <div class="gCap"><div><b>Foto 1</b><br><span>Grupo One Love</span></div><span>Ver</span></div>
-          </div>
+          <div class="carousel">
+            <div class="track" id="carTrack" aria-label="Carrusel de fotos">
+              <div class="slide" data-img="assetsstage.jpg" data-title="Escenario" data-sub="Ambiente festival">
+                <img src="assetsstage.jpg" alt="Escenario Grupo One Love">
+                <div class="sCap"><div><b>Escenario</b><br><span>Ambiente festival</span></div><span>Ver</span></div>
+              </div>
 
-          <div class="gItem span4" data-img="foto2.jpg" data-title="Foto 2" data-sub="Show en directo">
-            <img src="foto2.jpg" alt="Foto 2 Grupo One Love">
-            <div class="gCap"><div><b>Foto 2</b><br><span>Show en directo</span></div><span>Ver</span></div>
-          </div>
+              <div class="slide" data-img="foto1.jpg" data-title="Foto 1" data-sub="Grupo One Love">
+                <img src="foto1.jpg" alt="Foto 1 Grupo One Love">
+                <div class="sCap"><div><b>Foto 1</b><br><span>Grupo One Love</span></div><span>Ver</span></div>
+              </div>
 
-          <div class="gItem span4" data-img="foto3.jpg" data-title="Foto 3" data-sub="Energía en pista">
-            <img src="foto3.jpg" alt="Foto 3 Grupo One Love">
-            <div class="gCap"><div><b>Foto 3</b><br><span>Energía en pista</span></div><span>Ver</span></div>
-          </div>
+              <div class="slide" data-img="foto2.jpg" data-title="Foto 2" data-sub="Show en directo">
+                <img src="foto2.jpg" alt="Foto 2 Grupo One Love">
+                <div class="sCap"><div><b>Foto 2</b><br><span>Show en directo</span></div><span>Ver</span></div>
+              </div>
 
-          <div class="gItem span4" data-img="foto4.jpg" data-title="Foto 4" data-sub="Momento top">
-            <img src="foto4.jpg" alt="Foto 4 Grupo One Love">
-            <div class="gCap"><div><b>Foto 4</b><br><span>Momento top</span></div><span>Ver</span></div>
+              <div class="slide" data-img="foto3.jpg" data-title="Foto 3" data-sub="Energía en pista">
+                <img src="foto3.jpg" alt="Foto 3 Grupo One Love">
+                <div class="sCap"><div><b>Foto 3</b><br><span>Energía en pista</span></div><span>Ver</span></div>
+              </div>
+
+              <div class="slide" data-img="foto4.jpg" data-title="Foto 4" data-sub="Momento top">
+                <img src="foto4.jpg" alt="Foto 4 Grupo One Love">
+                <div class="sCap"><div><b>Foto 4</b><br><span>Momento top</span></div><span>Ver</span></div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div style="height:10px"></div>
+        <p class="note reveal" style="margin:0">Para añadir más fotos: duplica un bloque <b>.slide</b> y cambia el nombre del archivo. No se “rompe” el diseño.</p>
       </div>
     </section>
 
@@ -1343,6 +1419,7 @@
             <h2>Vídeo</h2>
             <p>Vídeo real de Grupo One Love.</p>
           </div>
+          <a class="btn" href="https://www.youtube.com/@GrupoOneLove" target="_blank" rel="noopener">Ver canal ↗</a>
         </div>
 
         <div class="videoWrap reveal">
@@ -1530,7 +1607,8 @@
 
     // Seleccionar pack y bajar a contratación
     document.querySelectorAll("[data-pack]").forEach(btn => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
         const pack = btn.getAttribute("data-pack") || "";
         const formEl = document.getElementById("bookingForm");
         formEl?.setAttribute("data-selected-pack", pack);
@@ -1640,7 +1718,7 @@
       });
     });
 
-    // Lightbox galería
+    // Lightbox (para carrusel y futuras galerías)
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxTitle = document.getElementById("lightboxTitle");
@@ -1662,7 +1740,12 @@
       lightboxImg.src = "";
     }
 
-    document.querySelectorAll(".gItem").forEach(item => {
+    lightboxClose?.addEventListener("click", closeLightbox);
+    lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+
+    // Click para abrir lightbox (carrusel)
+    document.querySelectorAll(".slide").forEach(item => {
       item.addEventListener("click", () => {
         openLightbox(
           item.getAttribute("data-img") || "assetsstage.jpg",
@@ -1672,9 +1755,19 @@
       });
     });
 
-    lightboxClose?.addEventListener("click", closeLightbox);
-    lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
-    window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
+    // Carrusel: botones prev/next
+    const track = document.getElementById("carTrack");
+    const prev = document.getElementById("carPrev");
+    const next = document.getElementById("carNext");
+
+    function scrollBySlide(dir){
+      if (!track) return;
+      const firstSlide = track.querySelector(".slide");
+      const step = firstSlide ? (firstSlide.getBoundingClientRect().width + 12) : 260;
+      track.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
+    prev?.addEventListener("click", () => scrollBySlide(-1));
+    next?.addEventListener("click", () => scrollBySlide(1));
   </script>
 </body>
 </html>
