@@ -5,15 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#070a12" />
 
-  <title>Grupo One Love — Show profesional estilo festival</title>
-  <meta name="description" content="Grupo One Love: show profesional estilo festival para bodas, fiestas, ayuntamientos y eventos. Repertorio amplio, imagen premium y contratación rápida por WhatsApp." />
-  <meta name="robots" content="index,follow" />
+  <!-- SEO: Title y Description orientados a búsquedas reales -->
+  <title>Grupo One Love | Dúo musical en Castellón para bodas, fiestas y eventos</title>
+  <meta name="description" content="Grupo One Love: dúo musical en Castellón para bodas, fiestas privadas, ayuntamientos, hoteles y eventos de empresa. Repertorio variado (pop/rock, internacionales, latino y remember). Contratación rápida por WhatsApp." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://grupoonelove.es" />
+
+  <!-- SEO local (no es mágico, pero ayuda a contextualizar) -->
+  <meta name="geo.region" content="ES-VC" />
+  <meta name="geo.placename" content="Castellón" />
+  <meta name="ICBM" content="40.0, 0.0" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Grupo One Love" />
+  <meta property="og:title" content="Grupo One Love | Dúo musical en Castellón para eventos" />
+  <meta property="og:description" content="Dúo musical para bodas, fiestas privadas, ayuntamientos, hoteles y eventos de empresa. Repertorio variado y contratación rápida por WhatsApp." />
+  <meta property="og:url" content="https://grupoonelove.es" />
+  <meta property="og:image" content="https://grupoonelove.es/assetsstage.jpg" />
+  <meta property="og:image:alt" content="Escenario del Grupo One Love" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Grupo One Love | Dúo musical en Castellón" />
+  <meta name="twitter:description" content="Música para bodas, fiestas y eventos en Castellón. Pop/rock, internacionales, latino y remember." />
+  <meta name="twitter:image" content="https://grupoonelove.es/assetsstage.jpg" />
+
+  <!-- Performance: preload hero image -->
+  <link rel="preload" as="image" href="assetsstage.jpg" />
 
   <!-- Tipografías gratuitas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Datos estructurados (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MusicGroup","LocalBusiness"],
+    "name": "Grupo One Love",
+    "url": "https://grupoonelove.es",
+    "image": "https://grupoonelove.es/assetsstage.jpg",
+    "description": "Dúo musical para bodas, fiestas privadas, ayuntamientos, hoteles y eventos de empresa. Repertorio variado: pop/rock español, internacionales, latino/pachanga y remember 80-90.",
+    "telephone": "+34 634 352 905",
+    "areaServed": [
+      "Castellón",
+      "Vinaròs",
+      "Benicarló",
+      "Peñíscola",
+      "Tarragona",
+      "Valencia"
+    ],
+    "sameAs": [
+      "https://www.tiktok.com/@grupoonelove",
+      "https://www.instagram.com/grupoonelove1/",
+      "https://www.youtube.com/@GrupoOneLove"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ES",
+      "addressRegion": "Comunitat Valenciana",
+      "addressLocality": "Castellón"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+34 634 352 905",
+      "contactType": "reservas",
+      "availableLanguage": ["es"]
+    }]
+  }
+  </script>
 
   <style>
     :root{
@@ -52,6 +112,16 @@
     a{ color:inherit; text-decoration:none; }
     img{ max-width:100%; display:block; }
     .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Texto SEO (visible, pero discreto). A Google le encanta el contexto local. */
+    .seoText{
+      margin: 0 0 18px;
+      color: rgba(255,255,255,.80);
+      font-size: 13px;
+      line-height: 1.75;
+      max-width: 74ch;
+    }
+    .seoText b{ color: rgba(255,255,255,.92); }
 
     /* Línea superior */
     .topline{
@@ -1118,7 +1188,7 @@
         <div class="logoMark" aria-hidden="true"></div>
         <div class="brandText">
           <strong>Grupo One Love</strong>
-          <span>Show premium • Estilo festival</span>
+          <span>Dúo musical • Castellón • Estilo festival</span>
         </div>
       </a>
 
@@ -1164,17 +1234,23 @@
 
       <div class="container heroGrid heroIntro">
         <div class="reveal">
-          <div class="badge"><span class="dot" aria-hidden="true"></span><span>Show profesional para fiestas, eventos y escenarios</span></div>
+          <!-- SEO: H1 con intención local SIN romper estilo -->
+          <div class="badge"><span class="dot" aria-hidden="true"></span><span>Dúo musical en Castellón para bodas, fiestas y eventos</span></div>
 
-          <h1><span class="gradText">SHOW</span><br/>de <span class="gradText">ALTO VOLTAJE</span></h1>
+          <h1><span class="gradText">GRUPO</span><br/>ONE <span class="gradText">LOVE</span></h1>
+
+          <!-- SEO: texto “de verdad” con palabras clave -->
+          <p class="seoText">
+            <b>Grupo One Love</b> es un <b>dúo musical en Castellón</b> para <b>bodas</b>, <b>fiestas privadas</b>, <b>ayuntamientos</b>, <b>hoteles</b> y <b>eventos de empresa</b>.
+            Actuamos en <b>Vinaròs</b>, <b>Benicarló</b>, <b>Peñíscola</b> y alrededores, con repertorio <b>pop/rock español</b>, <b>internacionales</b>, <b>latino/pachanga</b> y <b>remember 80-90</b>.
+          </p>
 
           <p class="heroKick">
             Una experiencia <b>potente, elegante y con ritmo</b> para que tu evento suba de nivel desde el primer tema.
           </p>
 
           <p class="sub">
-            <strong>Grupo One Love</strong> combina imagen premium + energía en pista con repertorio amplio:
-            pop/rock español, clásicos internacionales, latino/pachanga y temazos para que no pare.
+            <strong>Show estilo festival</strong> con imagen premium + energía en pista y repertorio amplio para que no pare.
           </p>
 
           <div class="ctaRow">
@@ -1191,9 +1267,9 @@
               <div class="kpi"><strong>Full mix</strong><span>Éxitos de todas las épocas<br/>y estilos</span></div>
             </div>
             <div class="miniList">
-              <span class="pill">Diseño de show</span>
-              <span class="pill">Repertorio amplio</span>
-              <span class="pill">Imagen pro</span>
+              <span class="pill">Dúo musical</span>
+              <span class="pill">Bodas y eventos</span>
+              <span class="pill">Castellón</span>
               <span class="pill">Contratación rápida</span>
             </div>
           </div>
@@ -1218,7 +1294,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Show</h2>
-            <p>Estructura premium, potente y clara para que el cliente entienda tu valor en 10 segundos.</p>
+            <p>Sonido pro, imagen premium y ritmo sin pausas para bodas, fiestas y eventos en Castellón.</p>
           </div>
           <a class="btn" href="#contratacion">Contratar</a>
         </div>
@@ -1256,7 +1332,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Repertorio por estilos</h2>
-            <p>Selección por bloques para adaptar el show al público. (Ejemplos orientativos: se ajusta según evento.)</p>
+            <p>Bloques adaptables para bodas, fiestas y eventos (Castellón, Vinaròs, Benicarló y alrededores).</p>
           </div>
           <a class="btn" href="#contratacion">Pedir propuesta</a>
         </div>
@@ -1307,7 +1383,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Packs de contratación</h2>
-            <p>Tres opciones claras. Dinos fecha y localidad y te confirmamos disponibilidad y precio final.</p>
+            <p>Opciones claras para contratar un dúo musical en Castellón: bodas, fiestas privadas y eventos.</p>
           </div>
           <a class="btn btnPrimary" href="#contratacion">Pedir disponibilidad</a>
         </div>
@@ -1385,7 +1461,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Opiniones</h2>
-            <p>Lo que dicen de nosotros después del bolo. (Se puede cambiar por testimonios reales cuando quieras.)</p>
+            <p>Cuando quieras, sustituimos estas por reseñas reales (y eso sube muchísimo la confianza).</p>
           </div>
           <a class="btn" href="#contratacion">Quiero fecha</a>
         </div>
@@ -1470,13 +1546,13 @@
       </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: EVENTOS Y CLIENTES -->
+    <!-- EVENTOS Y CLIENTES -->
     <section id="eventos">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>Eventos y clientes</h2>
-            <p>Perfecto para ayuntamientos, hoteles, bodas y empresas. Confianza rápida: organización, sonido y ritmo.</p>
+            <p>Dúo musical para ayuntamientos, hoteles, bodas y empresas. Organización, sonido y ritmo.</p>
           </div>
           <a class="btn btnPrimary" href="#contratacion">Reservar fecha</a>
         </div>
@@ -1542,37 +1618,30 @@
           <div class="marqueeWrap reveal" style="transition-delay:.06s">
             <div class="marqueeTop">
               <div class="hint">
-                Banda premium de “clientes / eventos”. Queda top sin logos.
+                Banda premium de “eventos / clientes”.
                 <br/>Si pasas el ratón por encima, se para.
               </div>
               <a class="btn" href="#contratacion">Pedir propuesta</a>
             </div>
 
             <div class="marquee" aria-label="Banda de eventos y clientes">
-              <!-- Duplicado del contenido para loop perfecto -->
               <div class="marqTrack" id="marqTrack">
-                <span class="marqChip">Fiestas patronales</span>
-                <span class="marqChip">Cenas baile</span>
+                <span class="marqChip">Dúo musical Castellón</span>
                 <span class="marqChip">Bodas</span>
+                <span class="marqChip">Fiestas privadas</span>
+                <span class="marqChip">Ayuntamientos</span>
                 <span class="marqChip">Hoteles</span>
                 <span class="marqChip">Empresas</span>
-                <span class="marqChip">Eventos privados</span>
-                <span class="marqChip">Asociaciones</span>
-                <span class="marqChip">Ayuntamientos</span>
-                <span class="marqChip">Verbenas</span>
                 <span class="marqChip">Remember</span>
                 <span class="marqChip">Latino / pachanga</span>
                 <span class="marqChip">Show premium</span>
 
-                <span class="marqChip">Fiestas patronales</span>
-                <span class="marqChip">Cenas baile</span>
+                <span class="marqChip">Dúo musical Castellón</span>
                 <span class="marqChip">Bodas</span>
+                <span class="marqChip">Fiestas privadas</span>
+                <span class="marqChip">Ayuntamientos</span>
                 <span class="marqChip">Hoteles</span>
                 <span class="marqChip">Empresas</span>
-                <span class="marqChip">Eventos privados</span>
-                <span class="marqChip">Asociaciones</span>
-                <span class="marqChip">Ayuntamientos</span>
-                <span class="marqChip">Verbenas</span>
                 <span class="marqChip">Remember</span>
                 <span class="marqChip">Latino / pachanga</span>
                 <span class="marqChip">Show premium</span>
@@ -1594,7 +1663,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Galería</h2>
-            <p>Un carrusel premium: se ve más top y si añades más fotos no “engorda” la web.</p>
+            <p>Fotos reales del show (cuantas más, más confianza). Haz clic para ver en grande.</p>
           </div>
         </div>
 
@@ -1613,27 +1682,27 @@
           <div class="carousel">
             <div class="track" id="carTrack" aria-label="Carrusel de fotos">
               <div class="slide" data-img="assetsstage.jpg" data-title="Escenario" data-sub="Ambiente festival">
-                <img src="assetsstage.jpg" alt="Escenario Grupo One Love">
+                <img src="assetsstage.jpg" alt="Escenario del dúo musical Grupo One Love en Castellón">
                 <div class="sCap"><div><b>Escenario</b><br><span>Ambiente festival</span></div><span>Ver</span></div>
               </div>
 
               <div class="slide" data-img="foto1.jpg" data-title="Foto 1" data-sub="Grupo One Love">
-                <img src="foto1.jpg" alt="Foto 1 Grupo One Love">
+                <img src="foto1.jpg" alt="Grupo One Love dúo musical para eventos en Castellón - foto 1">
                 <div class="sCap"><div><b>Foto 1</b><br><span>Grupo One Love</span></div><span>Ver</span></div>
               </div>
 
               <div class="slide" data-img="foto2.jpg" data-title="Foto 2" data-sub="Show en directo">
-                <img src="foto2.jpg" alt="Foto 2 Grupo One Love">
+                <img src="foto2.jpg" alt="Show del Grupo One Love en evento - foto 2">
                 <div class="sCap"><div><b>Foto 2</b><br><span>Show en directo</span></div><span>Ver</span></div>
               </div>
 
               <div class="slide" data-img="foto3.jpg" data-title="Foto 3" data-sub="Energía en pista">
-                <img src="foto3.jpg" alt="Foto 3 Grupo One Love">
+                <img src="foto3.jpg" alt="Energía en pista con Grupo One Love - foto 3">
                 <div class="sCap"><div><b>Foto 3</b><br><span>Energía en pista</span></div><span>Ver</span></div>
               </div>
 
               <div class="slide" data-img="foto4.jpg" data-title="Foto 4" data-sub="Momento top">
-                <img src="foto4.jpg" alt="Foto 4 Grupo One Love">
+                <img src="foto4.jpg" alt="Momento top del show del Grupo One Love - foto 4">
                 <div class="sCap"><div><b>Foto 4</b><br><span>Momento top</span></div><span>Ver</span></div>
               </div>
             </div>
