@@ -2015,38 +2015,27 @@
     }
     prev?.addEventListener("click", () => scrollBySlide(-1));
     next?.addEventListener("click", () => scrollBySlide(1));
-  </script>
-  <script>
-(function() {
-  const track = document.getElementById('carTrack');
-  if (!track) return;
+    // AUTOPLAY carrusel
+let paused = false;
 
-  let speed = 0.3; // velocidad (menor = más lento)
-  let position = 0;
-  let paused = false;
+track.addEventListener("mouseenter", () => paused = true);
+track.addEventListener("mouseleave", () => paused = false);
 
-  function animate() {
-    if (!paused) {
-      position += speed;
-      track.scrollLeft = position;
+setInterval(() => {
+  if (!paused) {
+    scrollBySlide(1);
 
-      // reiniciar al llegar al final
-      if (track.scrollLeft + track.clientWidth >= track.scrollWidth) {
-        position = 0;
-        track.scrollLeft = 0;
-      }
+    // volver al inicio al llegar al final
+    if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 5) {
+      track.scrollTo({ left: 0, behavior: "smooth" });
     }
-    requestAnimationFrame(animate);
+
   }
+}, 3000);
 
-  // pausar al pasar el ratón encima
-  track.addEventListener('mouseenter', () => paused = true);
-  track.addEventListener('mouseleave', () => paused = false);
 
-  // iniciar animación
-  animate();
-})();
-</script>
+  </script>
+
 
 </body>
 </html>
