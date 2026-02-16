@@ -2016,5 +2016,37 @@
     prev?.addEventListener("click", () => scrollBySlide(-1));
     next?.addEventListener("click", () => scrollBySlide(1));
   </script>
+  <script>
+(function() {
+  const track = document.getElementById('carTrack');
+  if (!track) return;
+
+  let speed = 0.3; // velocidad (menor = más lento)
+  let position = 0;
+  let paused = false;
+
+  function animate() {
+    if (!paused) {
+      position += speed;
+      track.scrollLeft = position;
+
+      // reiniciar al llegar al final
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth) {
+        position = 0;
+        track.scrollLeft = 0;
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+
+  // pausar al pasar el ratón encima
+  track.addEventListener('mouseenter', () => paused = true);
+  track.addEventListener('mouseleave', () => paused = false);
+
+  // iniciar animación
+  animate();
+})();
+</script>
+
 </body>
 </html>
