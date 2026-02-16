@@ -2002,36 +2002,40 @@
       });
     });
 
-    // Carrusel: botones prev/next
-    const track = document.getElementById("carTrack");
-    const prev = document.getElementById("carPrev");
-    const next = document.getElementById("carNext");
+   // Carrusel: botones prev/next
+const track = document.getElementById("carTrack");
+if (track) track.style.overflowX = "auto";
 
-    function scrollBySlide(dir){
-      if (!track) return;
-      const firstSlide = track.querySelector(".slide");
-      const step = firstSlide ? (firstSlide.getBoundingClientRect().width + 12) : 260;
-      track.scrollBy({ left: dir * step, behavior: "smooth" });
-    }
-    prev?.addEventListener("click", () => scrollBySlide(-1));
-    next?.addEventListener("click", () => scrollBySlide(1));
-    // AUTOPLAY carrusel
+const prev = document.getElementById("carPrev");
+const next = document.getElementById("carNext");
+
+function scrollBySlide(dir){
+  if (!track) return;
+  const firstSlide = track.querySelector(".slide");
+  const step = firstSlide ? (firstSlide.getBoundingClientRect().width + 12) : 260;
+  track.scrollBy({ left: dir * step, behavior: "smooth" });
+}
+
+prev?.addEventListener("click", () => scrollBySlide(-1));
+next?.addEventListener("click", () => scrollBySlide(1));
+
+// AUTOPLAY carrusel
 let paused = false;
 
-track.addEventListener("mouseenter", () => paused = true);
-track.addEventListener("mouseleave", () => paused = false);
+track?.addEventListener("mouseenter", () => paused = true);
+track?.addEventListener("mouseleave", () => paused = false);
 
 setInterval(() => {
-  if (!paused) {
-    scrollBySlide(1);
+  if (!track || paused) return;
 
-    // volver al inicio al llegar al final
-    if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 5) {
-      track.scrollTo({ left: 0, behavior: "smooth" });
-    }
+  scrollBySlide(1);
 
+  // volver al inicio al llegar al final
+  if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 5) {
+    track.scrollTo({ left: 0, behavior: "smooth" });
   }
 }, 3000);
+
 
 
   </script>
