@@ -1109,12 +1109,21 @@
       .clientsGrid{ grid-template-columns: 1fr; }
       .clientCards{ grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px){
+ 
+@media (max-width: 768px){
+  .hero{
+    min-height: 80vh !important;
+  }
+
   .hero::before{
-    background-position: 50% 25%;
-    background-size: cover;
+    background:
+      linear-gradient(180deg, rgba(7,10,18,.10), rgba(7,10,18,.86) 70%, rgba(7,10,18,1)),
+      url("grupo-one-love-portada.jpg") center top / contain no-repeat !important;
+
+    transform: scale(1) !important;
   }
 }
+
 
   </style>
 </head>
