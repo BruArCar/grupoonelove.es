@@ -2,21 +2,21 @@
 <html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFFFML03XB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFFFML03XB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-QFFFML03XB');
-</script>
+    gtag('config', 'G-QFFFML03XB');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#070a12" />
 
- <title>Grupo musical en Castellón y Valencia | Bodas, fiestas y eventos | Grupo One Love</title>
- <meta name="description" content="Grupo musical en Castellón y Valencia para bodas, fiestas patronales, empresas y eventos privados. Dúo, trío, cuarteto o banda completa. Consulta disponibilidad por WhatsApp.">
+  <title>Grupo musical en Castellón y Valencia | Bodas, fiestas y eventos | Grupo One Love</title>
+  <meta name="description" content="Grupo musical en Castellón y Valencia para bodas, fiestas patronales, empresas y eventos privados. Show musical con voces en directo, dúo, trío, cuarteto y formatos a medida. Consulta disponibilidad por WhatsApp.">
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://grupoonelove.es" />
   <link rel="icon" type="image/png" href="favicon.png">
@@ -64,7 +64,6 @@
     img{ max-width:100%; display:block; }
     .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
 
-    /* Línea superior */
     .topline{
       position:fixed; left:0; right:0; top:0;
       height:3px;
@@ -73,7 +72,6 @@
       opacity:.9;
     }
 
-    /* Ruido suave */
     .noise{
       pointer-events:none;
       position:fixed; inset:0;
@@ -84,7 +82,6 @@
       z-index:0;
     }
 
-    /* Header */
     header{
       position:fixed;
       top:0; left:0; right:0;
@@ -200,7 +197,6 @@
     }
     .hamburger{ display:none; }
 
-    /* Menú móvil desplegable */
     .menuSheet{
       position:fixed;
       top: var(--navh);
@@ -225,7 +221,6 @@
     }
     .menuSheet a:last-child{ margin-bottom:0; }
 
-    /* Hero */
     main{ position:relative; z-index:1; }
     .hero{
       padding-top: calc(var(--navh) + 20px);
@@ -242,7 +237,6 @@
       background:
         linear-gradient(180deg, rgba(7,10,18,.10), rgba(7,10,18,.86) 70%, rgba(7,10,18,1)),
         url("grupo-one-love-portada.jpg") center/cover no-repeat;
-
       filter: saturate(1.18) contrast(1.12);
       transform: scale(1.03);
       z-index:-3;
@@ -417,7 +411,6 @@
       100%{ opacity:0; }
     }
 
-    /* Secciones */
     section{ padding: 84px 0; }
     .sectionHead{
       display:flex;
@@ -473,7 +466,6 @@
     .feat b{ display:block; font-size: 13px; }
     .feat small{ display:block; color: var(--muted); font-size: 12px; line-height: 1.55; margin-top:2px; }
 
-    /* Repertorio */
     .reperGrid{
       display:grid;
       grid-template-columns: 1.1fr .9fr;
@@ -527,7 +519,6 @@
     .repItem b{ display:block; font-size: 13px; }
     .repItem small{ display:block; color: var(--muted); font-size: 12px; line-height:1.6; margin-top:2px; }
 
-    /* Packs */
     .packsGrid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -623,7 +614,6 @@
       box-shadow: 0 18px 60px rgba(0,0,0,.35);
     }
 
-    /* Opiniones + Redes */
     .triGrid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -646,13 +636,13 @@
       overflow:hidden;
     }
     .quote:before{
-      content:"“";
+      content:"★";
       position:absolute;
       right:12px;
-      top:-18px;
+      top:-6px;
       font-family: Oswald, Inter, system-ui;
-      font-size: 86px;
-      color: rgba(255,255,255,.08);
+      font-size: 64px;
+      color: rgba(255,255,255,.06);
       line-height:1;
       pointer-events:none;
     }
@@ -740,7 +730,6 @@
       white-space:nowrap;
     }
 
-    /* Eventos y clientes (confianza) */
     .clientsGrid{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -826,7 +815,6 @@
     }
     .marqueeWrap:hover .marqTrack{ animation-play-state: paused; }
 
-    /* Galería carrusel premium */
     .carouselWrap{
       border-radius: var(--r);
       border:1px solid rgba(255,255,255,.12);
@@ -928,7 +916,6 @@
       font-size: 11px;
     }
 
-    /* Vídeo */
     .videoWrap{
       border-radius: var(--r);
       overflow:hidden;
@@ -939,7 +926,6 @@
     .ratio{ position:relative; padding-top:56.25%; background:#000; }
     .ratio iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 
-    /* Contratación */
     .bookingGrid{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .form{ display:grid; gap:10px; }
     .field{ display:grid; gap:6px; }
@@ -959,7 +945,6 @@
     .formRow{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
     .note{ color: var(--muted); font-size: 12px; line-height: 1.7; }
 
-    /* Footer */
     footer{
       padding: 34px 0 42px;
       border-top: 1px solid rgba(255,255,255,.10);
@@ -984,7 +969,6 @@
       background: rgba(255,255,255,.03);
     }
 
-    /* WhatsApp flotante */
     .waFloat{
       position:fixed;
       right: 18px;
@@ -1015,7 +999,6 @@
       border-color: rgba(255,255,255,.20);
     }
 
-    /* Volver arriba */
     .toTop{
       display:inline-flex;
       align-items:center;
@@ -1045,7 +1028,6 @@
       transform: translateY(-1px);
     }
 
-    /* Lightbox */
     .lightbox{
       position:fixed; inset:0;
       background: rgba(0,0,0,.82);
@@ -1092,7 +1074,6 @@
       cursor:pointer;
     }
 
-    /* Animación scroll */
     .reveal{
       opacity:0;
       transform: translateY(16px);
@@ -1100,7 +1081,6 @@
     }
     .reveal.in{ opacity:1; transform: translateY(0); }
 
-    /* Responsive */
     @media (max-width: 980px){
       nav ul{ display:none; }
       .hamburger{ display:inline-flex; }
@@ -1154,7 +1134,7 @@
           <li><a href="#show">Show</a></li>
           <li><a href="#repertorio">Repertorio</a></li>
           <li><a href="#packs">Packs</a></li>
-          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#opiniones">Confianza</a></li>
           <li><a href="#eventos">Eventos</a></li>
           <li><a href="#redes">Redes</a></li>
           <li><a href="#galeria">Galería</a></li>
@@ -1176,7 +1156,7 @@
       <a href="#show" class="mLink">Show</a>
       <a href="#repertorio" class="mLink">Repertorio</a>
       <a href="#packs" class="mLink">Packs</a>
-      <a href="#opiniones" class="mLink">Opiniones</a>
+      <a href="#opiniones" class="mLink">Confianza</a>
       <a href="#eventos" class="mLink">Eventos</a>
       <a href="#redes" class="mLink">Redes</a>
       <a href="#galeria" class="mLink">Galería</a>
@@ -1191,43 +1171,36 @@
 
       <div class="container heroGrid heroIntro">
         <div class="reveal">
-          <!-- Badge: ahora orientada a cliente -->
           <div class="badge">
             <span class="dot" aria-hidden="true"></span>
-            <span>Música en directo para bodas, fiestas y eventos privados</span>
+            <span>Show musical con voces en directo para bodas, fiestas y eventos privados</span>
           </div>
 
-          <!-- H1: ahora dice QUÉ SOIS (y se entiende en 2 segundos) -->
           <h1>
-           <span class="gradText">Grupo musical en Castellón y Valencia</span><br/>
-  para bodas, fiestas y eventos
+            <span class="gradText">Grupo musical en Castellón y Valencia</span><br/>
+            para bodas, fiestas y eventos
           </h1>
 
-          <!-- Subheadline: formatos + zona (lo que el cliente necesita) -->
           <p class="heroKick">
             Dúo · Trío · Cuarteto · Banda completa<br/>
-  📍 Actuamos en Castellón, Valencia, Tarragona y Teruel
+            📍 Actuamos en Castellón, Valencia, Tarragona y Teruel
           </p>
 
-          <!-- Copy: elegancia + fiesta + versatilidad -->
           <p class="sub">
-            Música en directo para <b>bodas, fiestas patronales, eventos de empresa y celebraciones privadas</b>.
-  Show potente y elegante, repertorio adaptable por edades y atención rápida por WhatsApp.
+            Espectáculo musical con <b>voces en directo</b>, sonido profesional, imagen cuidada y repertorio adaptable para
+            <b>bodas, fiestas patronales, eventos de empresa y celebraciones privadas</b>.
           </p>
 
-          <!-- CTA: el principal ahora va a WhatsApp directo -->
           <div class="ctaRow">
-           <a class="btn btnPrimary" href="#contratacion">
-  Consultar disponibilidad
-  </a>
-  <a class="btn" href="#video">Ver vídeo</a>
-  <a class="btn" href="#galeria">Ver galería</a>
-</div>
+            <a class="btn btnPrimary" href="#contratacion">Consultar disponibilidad</a>
+            <a class="btn" href="#video">Ver vídeo</a>
+            <a class="btn" href="#galeria">Ver galería</a>
+          </div>
 
-<p class="note" style="margin-top:8px;">
-  📅 Fechas limitadas en temporada alta · Respuesta en el día
-</p> 
-            </div>
+          <p class="note" style="margin-top:8px;">
+            📅 Fechas limitadas en temporada alta · Respuesta en el día
+          </p>
+        </div>
 
         <div class="heroCards reveal" style="transition-delay:.08s">
           <div class="card">
@@ -1258,13 +1231,12 @@
       </div>
     </section>
 
-    <!-- TODO LO DEMÁS: igual que tu archivo original -->
     <section id="show">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>Show</h2>
-            <p>Estructura premium, potente y clara para que el cliente entienda tu valor en 10 segundos.</p>
+            <p>Un espectáculo elegante, potente y adaptable para convertir cada evento en una experiencia memorable.</p>
           </div>
           <a class="btn" href="#contratacion">Contratar</a>
         </div>
@@ -1275,8 +1247,8 @@
               <div class="featList">
                 <div class="feat"><i>★</i><div><b>Repertorio festival</b><small>Pop/rock español + internacional + bloque latino/pachanga.</small></div></div>
                 <div class="feat"><i>⚡</i><div><b>Ritmo sin pausas</b><small>Transiciones ágiles, dinámica y animación para mantener la energía.</small></div></div>
-                <div class="feat"><i>🎛</i><div><b>Sonido cuidado</b><small>Nivel pro: limpio, potente y agradable.</small></div></div>
-                <div class="feat"><i>✨</i><div><b>Imagen premium</b><small>Look oscuro y visual tipo festival.</small></div></div>
+                <div class="feat"><i>🎛</i><div><b>Sonido cuidado</b><small>Nivel pro: limpio, potente y agradable para el público.</small></div></div>
+                <div class="feat"><i>✨</i><div><b>Imagen premium</b><small>Estética cuidada, presencia escénica y formato adaptable.</small></div></div>
               </div>
             </div>
           </div>
@@ -1285,50 +1257,12 @@
             <div class="panelPad">
               <div class="featList">
                 <div class="feat"><i>✓</i><div><b>Planificación</b><small>Coordinación previa: horarios, montaje y enfoque musical.</small></div></div>
-                <div class="feat"><i>✓</i><div><b>Show principal</b><small>Actuación según formato acordado.</small></div></div>
-                <div class="feat"><i>✓</i><div><b>Opciones extra</b><small>Más horas, remember, bloque latino, etc.</small></div></div>
+                <div class="feat"><i>✓</i><div><b>Show principal</b><small>Actuación según formato acordado: dúo, trío, cuarteto o banda completa.</small></div></div>
+                <div class="feat"><i>✓</i><div><b>Opciones extra</b><small>Más horas, remember, bloque latino, animación o ampliación de formato.</small></div></div>
                 <div class="feat"><i>✓</i><div><b>Factura/recibo</b><small>Documentación para empresas, asociaciones y ayuntamientos.</small></div></div>
               </div>
               <div style="height:10px"></div>
-              <p class="note" style="margin:0">Packs listos: Básico / Premium / Festival.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="show">
-      <div class="container">
-        <div class="sectionHead reveal">
-          <div>
-            <h2>Show</h2>
-            <p>Estructura premium, potente y clara para que el cliente entienda tu valor en 10 segundos.</p>
-          </div>
-          <a class="btn" href="#contratacion">Contratar</a>
-        </div>
-
-        <div class="grid2">
-          <div class="panel reveal">
-            <div class="panelPad">
-              <div class="featList">
-                <div class="feat"><i>★</i><div><b>Repertorio festival</b><small>Pop/rock español + internacional + bloque latino/pachanga.</small></div></div>
-                <div class="feat"><i>⚡</i><div><b>Ritmo sin pausas</b><small>Transiciones ágiles, dinámica y animación para mantener la energía.</small></div></div>
-                <div class="feat"><i>🎛</i><div><b>Sonido cuidado</b><small>Nivel pro: limpio, potente y agradable.</small></div></div>
-                <div class="feat"><i>✨</i><div><b>Imagen premium</b><small>Look oscuro y visual tipo festival.</small></div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel reveal" style="transition-delay:.06s">
-            <div class="panelPad">
-              <div class="featList">
-                <div class="feat"><i>✓</i><div><b>Planificación</b><small>Coordinación previa: horarios, montaje y enfoque musical.</small></div></div>
-                <div class="feat"><i>✓</i><div><b>Show principal</b><small>Actuación según formato acordado.</small></div></div>
-                <div class="feat"><i>✓</i><div><b>Opciones extra</b><small>Más horas, remember, bloque latino, etc.</small></div></div>
-                <div class="feat"><i>✓</i><div><b>Factura/recibo</b><small>Documentación para empresas, asociaciones y ayuntamientos.</small></div></div>
-              </div>
-              <div style="height:10px"></div>
-              <p class="note" style="margin:0">Packs listos: Básico / Premium / Festival.</p>
+              <p class="note" style="margin:0">Packs disponibles: Básico / Premium / Festival.</p>
             </div>
           </div>
         </div>
@@ -1340,7 +1274,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Repertorio por estilos</h2>
-            <p>Selección por bloques para adaptar el show al público. (Ejemplos orientativos: se ajusta según evento.)</p>
+            <p>Selección por bloques para adaptar el show al público. El repertorio se ajusta según edad media, tipo de evento y ambiente deseado.</p>
           </div>
           <a class="btn" href="#contratacion">Pedir propuesta</a>
         </div>
@@ -1365,7 +1299,7 @@
               <div class="repList" id="repList" aria-live="polite" style="margin-top:14px;"></div>
 
               <div style="height:10px"></div>
-              <p class="note" style="margin:0">Tip: si nos dices <b>edad media</b> y <b>estilo</b>, ajustamos el set al 100%.</p>
+              <p class="note" style="margin:0">Cuanta más información nos des sobre el público, mejor ajustamos el set.</p>
             </div>
           </div>
 
@@ -1373,9 +1307,9 @@
             <div class="panelPad">
               <div class="featList">
                 <div class="feat"><i>🎯</i><div><b>Adaptación real</b><small>Cada evento es distinto: se ajustan bloques y tempos.</small></div></div>
-                <div class="feat"><i>🧩</i><div><b>Bloques inteligentes</b><small>Subidas progresivas + “temazos” en puntos clave.</small></div></div>
-                <div class="feat"><i>🕺</i><div><b>Pista siempre arriba</b><small>Transiciones y dinámica para no “cortar” la energía.</small></div></div>
-                <div class="feat"><i>📌</i><div><b>Peticiones</b><small>Podemos incluir 2–3 temas “imprescindibles” del cliente.</small></div></div>
+                <div class="feat"><i>🧩</i><div><b>Bloques inteligentes</b><small>Subidas progresivas + temazos en puntos clave.</small></div></div>
+                <div class="feat"><i>🕺</i><div><b>Pista siempre arriba</b><small>Transiciones y dinámica para no cortar la energía.</small></div></div>
+                <div class="feat"><i>📌</i><div><b>Peticiones</b><small>Podemos valorar canciones especiales o imprescindibles para el cliente.</small></div></div>
               </div>
 
               <div style="height:10px"></div>
@@ -1406,7 +1340,7 @@
               <div class="packList">
                 <div class="packFeat"><i>✓</i><span>Show y repertorio adaptado al evento</span></div>
                 <div class="packFeat"><i>✓</i><span>Bloque fiesta + temazos por edades</span></div>
-                <div class="packFeat"><i>✓</i><span>Coordinación previa (horarios y enfoque)</span></div>
+                <div class="packFeat"><i>✓</i><span>Coordinación previa de horarios y enfoque</span></div>
                 <div class="packFeat"><i>✓</i><span>Factura/recibo si lo necesitas</span></div>
               </div>
 
@@ -1422,13 +1356,13 @@
             <div class="packPad">
               <div class="packTag"><span class="miniDot" aria-hidden="true"></span><span>Equilibrio perfecto</span></div>
               <h3 class="packName">Premium</h3>
-              <p class="note" style="margin:0">Más completo, más impacto visual y experiencia “pro”.</p>
+              <p class="note" style="margin:0">Más completo, más impacto visual y experiencia profesional.</p>
 
               <div class="packList">
                 <div class="packFeat"><i>★</i><span>Show premium con dinámica y transiciones</span></div>
-                <div class="packFeat"><i>★</i><span>Bloques por estilos (pop/rock + internacional + latino)</span></div>
-                <div class="packFeat"><i>★</i><span>Opciones extra: remember / más horas (según evento)</span></div>
-                <div class="packFeat"><i>★</i><span>Atención rápida por WhatsApp el mismo día</span></div>
+                <div class="packFeat"><i>★</i><span>Bloques por estilos: pop/rock, internacional y latino</span></div>
+                <div class="packFeat"><i>★</i><span>Opciones extra: remember, más horas o bloque especial</span></div>
+                <div class="packFeat"><i>★</i><span>Atención rápida por WhatsApp</span></div>
               </div>
 
               <div class="packCtas">
@@ -1442,12 +1376,12 @@
             <div class="packPad">
               <div class="packTag"><span class="miniDot" aria-hidden="true"></span><span>Experiencia top</span></div>
               <h3 class="packName">Festival</h3>
-              <p class="note" style="margin:0">Para eventos grandes donde quieres “efecto wow”.</p>
+              <p class="note" style="margin:0">Para eventos grandes donde quieres efecto wow.</p>
 
               <div class="packList">
-                <div class="packFeat"><i>⚡</i><span>Enfoque “festival”: energía + momentos top</span></div>
-                <div class="packFeat"><i>⚡</i><span>Planificación detallada (timing y puntos clave)</span></div>
-                <div class="packFeat"><i>⚡</i><span>Bloques especiales: remember / latino / temáticos</span></div>
+                <div class="packFeat"><i>⚡</i><span>Enfoque festival: energía + momentos top</span></div>
+                <div class="packFeat"><i>⚡</i><span>Planificación detallada de timing y puntos clave</span></div>
+                <div class="packFeat"><i>⚡</i><span>Bloques especiales: remember, latino o temáticos</span></div>
                 <div class="packFeat"><i>⚡</i><span>Prioridad de atención y coordinación</span></div>
               </div>
 
@@ -1460,7 +1394,7 @@
         </div>
 
         <div style="height:14px"></div>
-        <p class="note reveal" style="margin:0">* Los packs son orientativos. Ajustamos según localidad, horario y necesidades del evento.</p>
+        <p class="note reveal" style="margin:0">* Los packs son orientativos. Ajustamos según localidad, horario, duración y necesidades del evento.</p>
       </div>
     </section>
 
@@ -1468,8 +1402,8 @@
       <div class="container">
         <div class="sectionHead reveal">
           <div>
-            <h2>Opiniones</h2>
-            <p>Opiniones reales de clientes después de sus eventos.</p>
+            <h2>Confianza</h2>
+            <p>Profesionalidad, trato directo y una propuesta musical preparada para que el evento funcione.</p>
           </div>
           <a class="btn" href="#contratacion">Quiero fecha</a>
         </div>
@@ -1479,30 +1413,27 @@
             <div class="panelPad">
               <div class="badge" style="margin-bottom:12px;">
                 <span class="dot" aria-hidden="true"></span>
-                <span>Experiencia “festival” en eventos reales</span>
+                <span>Lo que cuidamos en cada contratación</span>
               </div>
 
               <div class="testGrid">
                 <div class="quote">
-                  <p>“La pista no paró en toda la noche. Sonido perfecto y temazos uno detrás de otro.”</p>
-                  <div class="who"><span>Fiesta privada • Castellón</span><span class="stars">★★★★★</span></div>
+                  <p><b>Atención rápida</b><br>Respuesta directa por WhatsApp para resolver disponibilidad, formato y presupuesto.</p>
+                  <div class="who"><span>Comunicación clara</span><span class="stars">★★★★★</span></div>
                 </div>
                 <div class="quote">
-                  <p>“Muy profesionales, coordinamos todo por WhatsApp y salió redondo. Repetiremos.”</p>
-                  <div class="who"><span>Empresa • Valencia</span><span class="stars">★★★★★</span></div>
+                  <p><b>Repertorio adaptable</b><br>Preparamos el enfoque musical según público, edad media y tipo de celebración.</p>
+                  <div class="who"><span>Eventos a medida</span><span class="stars">★★★★★</span></div>
                 </div>
                 <div class="quote">
-                  <p>“Repertorio súper variado. Gustó a jóvenes y mayores, y el final fue brutal.”</p>
-                  <div class="who"><span>Asociación • Tarragona</span><span class="stars">★★★★★</span></div>
+                  <p><b>Imagen cuidada</b><br>Presencia escénica elegante, formato visual y estilo profesional para eventos.</p>
+                  <div class="who"><span>Look premium</span><span class="stars">★★★★★</span></div>
                 </div>
                 <div class="quote">
-                  <p>“Un show con imagen y energía. Se nota que cuidan el detalle y el ritmo.”</p>
-                  <div class="who"><span>Evento local • Vinaròs</span><span class="stars">★★★★★</span></div>
+                  <p><b>Gestión seria</b><br>Coordinación previa, horarios claros y documentación para empresas o asociaciones.</p>
+                  <div class="who"><span>Organización</span><span class="stars">★★★★★</span></div>
                 </div>
               </div>
-
-              <div style="height:10px"></div>
-              <p class="note" style="margin:0">Cuando me pases 4–6 testimonios reales (texto + lugar), los sustituyo tal cual.</p>
             </div>
           </div>
 
@@ -1554,7 +1485,6 @@
       </div>
     </section>
 
-    <!-- EVENTOS Y CLIENTES (LIMPIO: SIN FRASES “COLADAS”) -->
     <section id="eventos">
       <div class="container">
         <div class="sectionHead reveal">
@@ -1599,7 +1529,7 @@
                   <div class="cIcon">🏢</div>
                   <div class="cTxt">
                     <b>Empresas</b>
-                    <small>Eventos corporativos, celebraciones y team building.</small>
+                    <small>Eventos corporativos, celebraciones y fiestas privadas.</small>
                   </div>
                 </div>
                 <div class="cCard">
@@ -1668,7 +1598,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Galería</h2>
-            <p>Imágenes reales del show: energía, montaje y ambiente.</p>
+            <p>Imágenes reales del show: formación, voces, energía, montaje y ambiente.</p>
           </div>
         </div>
 
@@ -1685,39 +1615,38 @@
 
           <div class="carousel">
             <div class="track" id="carTrack" aria-label="Carrusel de fotos">
-              <div class="slide" data-img="grupo-one-love-formacion-2026.webp" data-title="Grupo One Love" data-sub="Formación completa">
-  <img src="grupo-one-love-formacion-2026.webp" alt="Grupo One Love formación completa">
-  <div class="sCap">
-    <div><b>Grupo One Love</b><br><span>Formación completa</span></div>
-    <span>Ver</span>
-  </div>
-</div>
 
-<div class="slide" data-img="grupo-one-love-cantante-directo.webp" data-title="Voz en directo" data-sub="Grupo One Love">
-  <img src="grupo-one-love-cantante-directo.webp" alt="Cantante de Grupo One Love actuando en directo">
-  <div class="sCap">
-    <div><b>Voz en directo</b><br><span>Grupo One Love</span></div>
-    <span>Ver</span>
-  </div>
-</div>
-         <div class="slide" data-img="foto5.jpg" data-title="Show premium" data-sub="Grupo One Love">
-  <img src="foto5.jpg" alt="Foto 5 Grupo One Love">
-  <div class="sCap">
-    <div><b>Show premium</b><br><span>Grupo One Love</span></div>
-    <span>Ver</span>
-  </div>
-</div>
+              <div class="slide" data-img="grupo-one-love-formacion-2026.webp" data-title="Grupo One Love" data-sub="Show completo">
+                <img src="grupo-one-love-formacion-2026.webp" alt="Grupo One Love formación completa">
+                <div class="sCap">
+                  <div><b>Grupo One Love</b><br><span>Show completo</span></div>
+                  <span>Ver</span>
+                </div>
+              </div>
 
-<div class="slide" data-img="foto6.jpg" data-title="En directo" data-sub="Momento top">
-  <img src="foto6.jpg" alt="Foto 6 Grupo One Love">
-  <div class="sCap">
-    <div><b>En directo</b><br><span>Momento top</span></div>
-    <span>Ver</span>
-  </div>
-</div>
+              <div class="slide" data-img="grupo-one-love-cantante-directo.webp" data-title="Voz en directo" data-sub="Momentos reales">
+                <img src="grupo-one-love-cantante-directo.webp" alt="Cantante de Grupo One Love actuando en directo">
+                <div class="sCap">
+                  <div><b>Voz en directo</b><br><span>Momentos reales</span></div>
+                  <span>Ver</span>
+                </div>
+              </div>
 
+              <div class="slide" data-img="foto5.jpg" data-title="Show premium" data-sub="Grupo One Love">
+                <img src="foto5.jpg" alt="Foto 5 Grupo One Love">
+                <div class="sCap">
+                  <div><b>Show premium</b><br><span>Grupo One Love</span></div>
+                  <span>Ver</span>
+                </div>
+              </div>
 
-
+              <div class="slide" data-img="foto6.jpg" data-title="En directo" data-sub="Momento top">
+                <img src="foto6.jpg" alt="Foto 6 Grupo One Love">
+                <div class="sCap">
+                  <div><b>En directo</b><br><span>Momento top</span></div>
+                  <span>Ver</span>
+                </div>
+              </div>
 
               <div class="slide" data-img="assetsstage.jpg" data-title="Escenario" data-sub="Ambiente festival">
                 <img src="assetsstage.jpg" alt="Escenario Grupo One Love">
@@ -1748,7 +1677,7 @@
         </div>
 
         <div style="height:10px"></div>
-        <p class="note reveal" style="margin:0">Para añadir más fotos: duplica un bloque <b>.slide</b> y cambia el nombre del archivo.</p>
+        <p class="note reveal" style="margin:0">Galería actualizada con fotos de la formación y momentos del show.</p>
       </div>
     </section>
 
@@ -1779,7 +1708,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Contratación</h2>
-            <p>Rellena el formulario y se abre WhatsApp con el mensaje preparado (gratis, sin servidores).</p>
+            <p>Rellena el formulario y se abre WhatsApp con el mensaje preparado.</p>
           </div>
           <a class="btn btnPrimary" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp directo</a>
         </div>
@@ -1830,12 +1759,12 @@
             <div class="panelPad">
               <div class="featList">
                 <div class="feat"><i>☎</i><div><b>WhatsApp</b><small><a href="https://wa.me/34634352905" target="_blank" rel="noopener">+34 634 352 905</a></small></div></div>
-                <div class="feat"><i>📍</i><div><b>Zona</b><small>Castellón / Tarragona / Valencia (y alrededores)</small></div></div>
+                <div class="feat"><i>📍</i><div><b>Zona</b><small>Castellón / Tarragona / Valencia / Teruel y alrededores</small></div></div>
                 <div class="feat"><i>🧾</i><div><b>Factura</b><small>Para empresas, asociaciones y ayuntamientos</small></div></div>
                 <div class="feat"><i>⏱</i><div><b>Respuesta</b><small>Normalmente en el mismo día</small></div></div>
               </div>
               <div style="height:10px"></div>
-              <p class="note" style="margin:0">Si quieres, también pongo aquí un email de contacto.</p>
+              <p class="note" style="margin:0">Para preparar presupuesto, envíanos fecha, localidad, horario aproximado y tipo de evento.</p>
             </div>
           </div>
         </div>
@@ -1864,7 +1793,6 @@
     <a class="waBtn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightboxInner">
       <img class="lightboxImg" id="lightboxImg" alt="Imagen ampliada">
@@ -1879,7 +1807,6 @@
   </div>
 
   <script>
-    // Header scroll
     const header = document.getElementById("siteHeader");
     const onScroll = () => {
       if (window.scrollY > 10) header.classList.add("scrolled");
@@ -1888,22 +1815,18 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    // Menú móvil
     const menuBtn = document.getElementById("menuBtn");
     const menuSheet = document.getElementById("menuSheet");
     menuBtn?.addEventListener("click", () => menuSheet.classList.toggle("open"));
     document.querySelectorAll(".mLink").forEach(l => l.addEventListener("click", () => menuSheet.classList.remove("open")));
 
-    // Reveal animaciones
     const io = new IntersectionObserver((entries) => {
       for (const entry of entries) if (entry.isIntersecting) entry.target.classList.add("in");
     }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-    // Año
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Volver arriba
     const toTop = document.getElementById("toTop");
     const onTopToggle = () => {
       if (!toTop) return;
@@ -1914,7 +1837,6 @@
     onTopToggle();
     toTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    // Formulario a WhatsApp
     const WHATSAPP_NUMBER = "34634352905";
     const WHATSAPP_URL = "https://wa.me/" + WHATSAPP_NUMBER;
 
@@ -1946,7 +1868,6 @@
       window.open(WHATSAPP_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
     });
 
-    // Seleccionar pack y bajar a contratación
     document.querySelectorAll("[data-pack]").forEach(btn => {
       btn.addEventListener("click", (ev) => {
         ev.preventDefault();
@@ -1964,7 +1885,6 @@
       });
     });
 
-    // Repertorio por estilos (data)
     const REP_DATA = {
       fiesta: {
         title: "Fiesta total",
@@ -1972,7 +1892,7 @@
         items: [
           { icon:"🔥", title:"Apertura potente", desc:"Entramos con hits conocidos para enganchar desde el minuto 1." },
           { icon:"🎤", title:"Canta y baila", desc:"Bloque participativo para que la gente se venga arriba." },
-          { icon:"⚡", title:"Subidas sin cortes", desc:"Transiciones ágiles y ritmo continuo (cero bajones)." },
+          { icon:"⚡", title:"Subidas sin cortes", desc:"Transiciones ágiles y ritmo continuo." },
           { icon:"🏁", title:"Final épico", desc:"Cierre con clásicos infalibles para terminar con la pista arriba." }
         ]
       },
@@ -1980,17 +1900,17 @@
         title: "Pop/Rock español",
         sub: "Clásicos y actuales",
         items: [
-          { icon:"🎸", title:"Éxitos de siempre", desc:"Pop/rock español para todas las edades (muy cantable)." },
-          { icon:"🕺", title:"Ritmo y guitarra", desc:"Temas con energía para saltar a la pista sin pensarlo." },
-          { icon:"🎶", title:"Medleys", desc:"Si encaja, agrupamos temas para mantener velocidad y flow." }
+          { icon:"🎸", title:"Éxitos de siempre", desc:"Pop/rock español para todas las edades." },
+          { icon:"🕺", title:"Ritmo y energía", desc:"Temas potentes para saltar a la pista sin pensarlo." },
+          { icon:"🎶", title:"Medleys", desc:"Cuando encaja, agrupamos temas para mantener velocidad y flow." }
         ]
       },
       internacionales: {
         title: "Internacionales",
         sub: "Hits globales",
         items: [
-          { icon:"🌍", title:"Clásicos internacionales", desc:"Temas que conoce todo el mundo (de varias décadas)." },
-          { icon:"💃", title:"Dance/party", desc:"Bloque “arriba” para fiestas de empresa y eventos." },
+          { icon:"🌍", title:"Clásicos internacionales", desc:"Temas reconocibles de varias décadas." },
+          { icon:"💃", title:"Dance/party", desc:"Bloque arriba para fiestas de empresa y eventos." },
           { icon:"🎧", title:"Transiciones tipo DJ", desc:"Pasos entre temas para que no se rompa la energía." }
         ]
       },
@@ -1999,16 +1919,16 @@
         sub: "Sabor y movimiento",
         items: [
           { icon:"🌴", title:"Pachanga", desc:"Bloque alegre y muy bailable para levantar la pista." },
-          { icon:"🥁", title:"Ritmos latinos", desc:"Cumbia/salsa/urbano latino según el público." },
-          { icon:"🕺", title:"Animación", desc:"Dinámica para que se sume la gente (sin forzar)." }
+          { icon:"🥁", title:"Ritmos latinos", desc:"Cumbia, salsa o urbano latino según el público." },
+          { icon:"🕺", title:"Animación", desc:"Dinámica para que se sume la gente de forma natural." }
         ]
       },
       remember: {
         title: "Remember / 80-90",
         sub: "Nostalgia que funciona",
         items: [
-          { icon:"🕰", title:"Clásicos 80-90", desc:"Temas míticos para cantar y bailar (muy efectivos)." },
-          { icon:"✨", title:"Pop-dance", desc:"Bloque con energía que engancha a todas las edades." },
+          { icon:"🕰", title:"Clásicos 80-90", desc:"Temas míticos para cantar y bailar." },
+          { icon:"✨", title:"Pop-dance", desc:"Bloque con energía que engancha a varias generaciones." },
           { icon:"🚀", title:"Subida final", desc:"Cierre con hits recordados y bailables." }
         ]
       },
@@ -2059,7 +1979,6 @@
       });
     });
 
-    // Lightbox
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxTitle = document.getElementById("lightboxTitle");
@@ -2085,7 +2004,6 @@
     lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
     window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
 
-    // Click lightbox (carrusel)
     document.querySelectorAll(".slide").forEach(item => {
       item.addEventListener("click", () => {
         openLightbox(
@@ -2096,44 +2014,36 @@
       });
     });
 
-   // Carrusel: botones prev/next
-const track = document.getElementById("carTrack");
-if (track) track.style.overflowX = "auto";
+    const track = document.getElementById("carTrack");
+    if (track) track.style.overflowX = "auto";
 
-const prev = document.getElementById("carPrev");
-const next = document.getElementById("carNext");
+    const prev = document.getElementById("carPrev");
+    const next = document.getElementById("carNext");
 
-function scrollBySlide(dir){
-  if (!track) return;
-  const firstSlide = track.querySelector(".slide");
-  const step = firstSlide ? (firstSlide.getBoundingClientRect().width + 12) : 260;
-  track.scrollBy({ left: dir * step, behavior: "smooth" });
-}
+    function scrollBySlide(dir){
+      if (!track) return;
+      const firstSlide = track.querySelector(".slide");
+      const step = firstSlide ? (firstSlide.getBoundingClientRect().width + 12) : 260;
+      track.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
 
-prev?.addEventListener("click", () => scrollBySlide(-1));
-next?.addEventListener("click", () => scrollBySlide(1));
+    prev?.addEventListener("click", () => scrollBySlide(-1));
+    next?.addEventListener("click", () => scrollBySlide(1));
 
-// AUTOPLAY carrusel
-let paused = false;
+    let paused = false;
 
-track?.addEventListener("mouseenter", () => paused = true);
-track?.addEventListener("mouseleave", () => paused = false);
+    track?.addEventListener("mouseenter", () => paused = true);
+    track?.addEventListener("mouseleave", () => paused = false);
 
-setInterval(() => {
-  if (!track || paused) return;
+    setInterval(() => {
+      if (!track || paused) return;
 
-  scrollBySlide(1);
+      scrollBySlide(1);
 
-  // volver al inicio al llegar al final
-  if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 5) {
-    track.scrollTo({ left: 0, behavior: "smooth" });
-  }
-}, 3000);
-
-
-
+      if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 5) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+      }
+    }, 3000);
   </script>
-
-
 </body>
 </html>
