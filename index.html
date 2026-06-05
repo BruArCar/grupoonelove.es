@@ -16,10 +16,34 @@
   <meta name="theme-color" content="#070a12" />
 
   <title>Grupo musical en Castellón y Valencia | Bodas, fiestas y eventos | Grupo One Love</title>
-  <meta name="description" content="Grupo musical en Castellón y Valencia para bodas, fiestas patronales, empresas y eventos privados. Show musical con voces en directo, dúo, trío, cuarteto y formatos a medida. Consulta disponibilidad por WhatsApp.">
+  <meta name="description" content="Grupo One Love: música en directo para bodas, fiestas patronales, verbenas, hoteles, empresas y eventos privados en Castellón, Valencia, Tarragona y Teruel. Consulta fecha por WhatsApp.">
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://grupoonelove.es" />
   <link rel="icon" type="image/png" href="favicon.png">
+  <meta property="og:title" content="Grupo One Love | Música en directo para bodas, fiestas y eventos">
+  <meta property="og:description" content="Show musical profesional con voces en directo, repertorio adaptable y formatos dúo, trío, cuarteto o banda completa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://grupoonelove.es/">
+  <meta property="og:image" content="https://grupoonelove.es/grupo-one-love-portada.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Grupo One Love",
+    "url": "https://grupoonelove.es/",
+    "image": "https://grupoonelove.es/grupo-one-love-portada.jpg",
+    "telephone": "+34634352905",
+    "areaServed": ["Castellón", "Valencia", "Tarragona", "Teruel"],
+    "description": "Grupo musical con voces en directo para bodas, fiestas patronales, verbenas, hoteles, empresas y eventos privados.",
+    "sameAs": [
+      "https://www.tiktok.com/@grupoonelove",
+      "https://www.instagram.com/grupoonelove1/",
+      "https://www.youtube.com/@GrupoOneLove"
+    ]
+  }
+  </script>
 
   <!-- Tipografías gratuitas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -309,11 +333,12 @@
     h1{
       margin: 18px 0 10px;
       font-family: Oswald, Inter, system-ui;
-      font-size: clamp(44px, 5.6vw, 78px);
-      line-height: .92;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: .96;
       letter-spacing: .9px;
       text-transform: uppercase;
       text-shadow: 0 10px 70px rgba(0,0,0,.60);
+      max-width: 100%;
     }
     .gradText{
       background: linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.70) 60%, rgba(255,255,255,.95));
@@ -993,6 +1018,14 @@
       font-size: 13px;
       transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
     }
+    .waBtn::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:#25d366;
+      box-shadow: 0 0 18px rgba(37,211,102,.65);
+    }
     .waBtn:hover{
       transform: translateY(-1px) scale(1.01);
       background: rgba(0,0,0,.48);
@@ -1100,6 +1133,51 @@
     }
 
     @media (max-width: 768px){
+      .container{ width:min(var(--max), calc(100% - 28px)); }
+      .nav{ gap:8px; }
+      .brand{ gap:10px; flex:1 1 auto; min-width:0; }
+      .logoMark{ width:36px; height:36px; border-radius:13px; flex:0 0 auto; }
+      .brandText{ min-width:0; }
+      .brandText strong{ font-size:16px; line-height:1; }
+      .brandText span{ font-size:11px; }
+      .navRight{ gap:0; flex:0 0 44px; min-width:44px; justify-content:flex-end; }
+      .navRight .btn:not(.btnIcon){ display:none; }
+      .hamburger{
+        display:inline-flex;
+        position:fixed;
+        top:16px;
+        right:14px;
+        z-index:1002;
+        color:#fff;
+        background: rgba(0,0,0,.34);
+      }
+      .badge{ max-width:100%; border-radius:20px; align-items:flex-start; }
+      .badge span:last-child{ min-width:0; }
+      .sectionHead{ align-items:flex-start; flex-direction:column; }
+      .ctaRow .btn{ width:100%; justify-content:center; }
+      .heroCards .btn{ width:100%; justify-content:center; }
+      h1{
+        font-size: 39px;
+        line-height: 1;
+        letter-spacing: 0;
+        overflow-wrap: normal;
+      }
+      .heroKick,
+      .sub{ font-size:14px; }
+      .waFloat{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        flex-direction:row;
+        align-items:center;
+      }
+      .waBtn{
+        flex:1;
+        justify-content:center;
+        background: linear-gradient(135deg, rgba(37,211,102,.24), rgba(0,0,0,.58));
+      }
+      footer{ padding-bottom:92px; }
+
       .hero{
         min-height: 80vh !important;
       }
@@ -1173,12 +1251,12 @@
         <div class="reveal">
           <div class="badge">
             <span class="dot" aria-hidden="true"></span>
-            <span>Show musical con voces en directo para bodas, fiestas y eventos privados</span>
+            <span>Música en directo para bodas, fiestas patronales, verbenas y eventos privados</span>
           </div>
 
           <h1>
             <span class="gradText">Grupo musical en Castellón y Valencia</span><br/>
-            para bodas, fiestas y eventos
+            con show en directo
           </h1>
 
           <p class="heroKick">
@@ -1188,7 +1266,7 @@
 
           <p class="sub">
             Espectáculo musical con <b>voces en directo</b>, sonido profesional, imagen cuidada y repertorio adaptable para
-            <b>bodas, fiestas patronales, eventos de empresa y celebraciones privadas</b>.
+            <b>bodas, verbenas, fiestas patronales, hoteles, empresas y celebraciones privadas</b>.
           </p>
 
           <div class="ctaRow">
@@ -1221,7 +1299,7 @@
               Escríbenos con <b>fecha + localidad + tipo de evento</b> y te confirmamos disponibilidad.
             </p>
             <div style="height:10px"></div>
-            <a class="btn btnPrimary" href="https://wa.me/34634352905" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+            <a class="btn btnPrimary" href="https://wa.me/34634352905?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20Grupo%20One%20Love.%20Fecha%3A%20___%20Localidad%3A%20___%20Tipo%20de%20evento%3A%20___" target="_blank" rel="noopener">Reservar por WhatsApp</a>
           </div>
         </div>
       </div>
@@ -1418,20 +1496,20 @@
 
               <div class="testGrid">
                 <div class="quote">
-                  <p><b>Atención rápida</b><br>Respuesta directa por WhatsApp para resolver disponibilidad, formato y presupuesto.</p>
-                  <div class="who"><span>Comunicación clara</span><span class="stars">★★★★★</span></div>
+                  <p><b>Disponibilidad clara</b><br>Confirmamos fecha, localidad, formato recomendado y necesidades técnicas antes de cerrar nada.</p>
+                  <div class="who"><span>Presupuesto sin rodeos</span><span class="stars">★★★★★</span></div>
                 </div>
                 <div class="quote">
-                  <p><b>Repertorio adaptable</b><br>Preparamos el enfoque musical según público, edad media y tipo de celebración.</p>
-                  <div class="who"><span>Eventos a medida</span><span class="stars">★★★★★</span></div>
+                  <p><b>Repertorio a medida</b><br>Ajustamos bloques musicales según edad media, tipo de evento y momentos importantes.</p>
+                  <div class="who"><span>Fiesta con ritmo</span><span class="stars">★★★★★</span></div>
                 </div>
                 <div class="quote">
-                  <p><b>Imagen cuidada</b><br>Presencia escénica elegante, formato visual y estilo profesional para eventos.</p>
-                  <div class="who"><span>Look premium</span><span class="stars">★★★★★</span></div>
+                  <p><b>Show profesional</b><br>Voces en directo, sonido cuidado y una imagen escénica elegante para eventos con presencia.</p>
+                  <div class="who"><span>Directo con impacto</span><span class="stars">★★★★★</span></div>
                 </div>
                 <div class="quote">
-                  <p><b>Gestión seria</b><br>Coordinación previa, horarios claros y documentación para empresas o asociaciones.</p>
-                  <div class="who"><span>Organización</span><span class="stars">★★★★★</span></div>
+                  <p><b>Gestión seria</b><br>Coordinación previa, horarios claros y documentación para empresas, asociaciones y ayuntamientos.</p>
+                  <div class="who"><span>Organización fiable</span><span class="stars">★★★★★</span></div>
                 </div>
               </div>
             </div>
@@ -1490,7 +1568,7 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Eventos y clientes</h2>
-            <p>Perfecto para ayuntamientos, hoteles, bodas y empresas. Confianza rápida: organización, sonido y ritmo.</p>
+            <p>Actuaciones para ayuntamientos, hoteles, bodas, empresas, fiestas privadas y verbenas. Organización, sonido y ritmo desde el primer contacto.</p>
           </div>
           <a class="btn btnPrimary" href="#contratacion">Reservar fecha</a>
         </div>
@@ -1708,9 +1786,9 @@
         <div class="sectionHead reveal">
           <div>
             <h2>Contratación</h2>
-            <p>Rellena el formulario y se abre WhatsApp con el mensaje preparado.</p>
+            <p>Pide disponibilidad con fecha, localidad y tipo de evento. Se abre WhatsApp con el mensaje preparado y no se guarda ningún dato en la web.</p>
           </div>
-          <a class="btn btnPrimary" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btnPrimary" href="https://wa.me/34634352905?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20Grupo%20One%20Love.%20Fecha%3A%20___%20Localidad%3A%20___%20Tipo%20de%20evento%3A%20___" target="_blank" rel="noopener">WhatsApp directo</a>
         </div>
 
         <div class="bookingGrid">
@@ -1720,7 +1798,7 @@
                 <div class="formRow">
                   <div class="field">
                     <label for="name">Nombre</label>
-                    <input id="name" type="text" placeholder="Tu nombre" autocomplete="name" />
+                    <input id="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
                   </div>
                   <div class="field">
                     <label for="phone">Teléfono</label>
@@ -1731,26 +1809,26 @@
                 <div class="formRow">
                   <div class="field">
                     <label for="date">Fecha del evento</label>
-                    <input id="date" type="text" placeholder="Ej: 08/08/2026" />
+                    <input id="date" type="text" placeholder="Ej: 08/08/2026" required />
                   </div>
                   <div class="field">
                     <label for="place">Localidad</label>
-                    <input id="place" type="text" placeholder="Ej: Vinaròs / Benicarló..." />
+                    <input id="place" type="text" placeholder="Ej: Vinaròs / Benicarló..." required />
                   </div>
                 </div>
 
                 <div class="field">
                   <label for="type">Tipo de evento</label>
-                  <input id="type" type="text" placeholder="Boda / Fiesta / Ayuntamiento / Empresa..." />
+                  <input id="type" type="text" placeholder="Boda / Fiesta / Ayuntamiento / Empresa..." required />
                 </div>
 
                 <div class="field">
                   <label for="msg">Detalles</label>
-                  <textarea id="msg" placeholder="Horario, lugar, público, duración…"></textarea>
+                  <textarea id="msg" placeholder="Horario aproximado, lugar, número de personas, duración o estilo musical deseado..."></textarea>
                 </div>
 
                 <button class="btn btnPrimary" type="submit">Enviar por WhatsApp</button>
-                <p class="note" style="margin:0">No se guardan datos en la web. Solo se abre WhatsApp con el texto.</p>
+                <p class="note" style="margin:0">No se guardan datos en la web. El formulario solo prepara el texto para WhatsApp.</p>
               </form>
             </div>
           </div>
@@ -1790,7 +1868,7 @@
 
   <div class="waFloat">
     <button class="toTop" id="toTop" type="button" aria-label="Volver arriba">↑</button>
-    <a class="waBtn" href="https://wa.me/34634352905" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="waBtn" href="https://wa.me/34634352905?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20Grupo%20One%20Love.%20Fecha%3A%20___%20Localidad%3A%20___%20Tipo%20de%20evento%3A%20___" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
