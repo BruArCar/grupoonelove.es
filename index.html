@@ -987,7 +987,7 @@
     .form{ display:grid; gap:10px; }
     .field{ display:grid; gap:6px; }
     label{ font-size: 12px; color: rgba(255,255,255,.78); }
-    input, textarea{
+    input, select, textarea{
       width:100%;
       padding: 12px 12px;
       border-radius: 14px;
@@ -997,6 +997,13 @@
       outline:none;
       font-family: inherit;
       font-size: 13px;
+    }
+    select{
+      appearance:none;
+      background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,.72) 50%), linear-gradient(135deg, rgba(255,255,255,.72) 50%, transparent 50%);
+      background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat:no-repeat;
     }
     textarea{ min-height: 120px; resize: vertical; }
     .formRow{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
@@ -1885,8 +1892,8 @@
       <div class="container">
         <div class="sectionHead reveal">
           <div>
-            <h2>Contratación</h2>
-            <p>Pide disponibilidad con fecha, localidad y tipo de evento. Se abre WhatsApp con el mensaje preparado y no se guarda ningún dato en la web.</p>
+            <h2>Calcula tu presupuesto</h2>
+            <p>Elige fecha, pueblo, formato y extras. Se abre WhatsApp con el mensaje preparado y no se guarda ningún dato en la web.</p>
           </div>
           <a class="btn btnPrimary" href="https://wa.me/34634352905?text=Hola%2C%20quiero%20consultar%20disponibilidad%20de%20Grupo%20One%20Love.%20Fecha%3A%20___%20Localidad%3A%20___%20Tipo%20de%20evento%3A%20___" target="_blank" rel="noopener">WhatsApp directo</a>
         </div>
@@ -1908,27 +1915,83 @@
 
                 <div class="formRow">
                   <div class="field">
-                    <label for="date">Fecha del evento</label>
-                    <input id="date" type="text" placeholder="Ej: 08/08/2026" required />
+                    <label for="date">Fecha</label>
+                    <input id="date" type="date" required />
                   </div>
                   <div class="field">
-                    <label for="place">Localidad</label>
+                    <label for="place">Pueblo o ciudad</label>
                     <input id="place" type="text" placeholder="Ej: Vinaròs / Benicarló..." required />
                   </div>
                 </div>
 
-                <div class="field">
-                  <label for="type">Tipo de evento</label>
-                  <input id="type" type="text" placeholder="Boda / Fiesta / Ayuntamiento / Empresa..." required />
+                <div class="formRow">
+                  <div class="field">
+                    <label for="type">Tipo de evento</label>
+                    <select id="type" required>
+                      <option value="">Elige una opción</option>
+                      <option>Boda</option>
+                      <option>Fiesta patronal</option>
+                      <option>Verbena</option>
+                      <option>Evento privado</option>
+                      <option>Empresa / hotel</option>
+                      <option>Ayuntamiento / comisión de fiestas</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="format">Formato</label>
+                    <select id="format" required>
+                      <option value="">Elige formato</option>
+                      <option>Dúo</option>
+                      <option>Trío</option>
+                      <option>Cuarteto</option>
+                      <option>DJ</option>
+                      <option>No lo sé, recomendadme</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="formRow">
+                  <div class="field">
+                    <label for="duration">Duración</label>
+                    <select id="duration" required>
+                      <option value="">Elige duración</option>
+                      <option>1 hora</option>
+                      <option>1 hora y media</option>
+                      <option>2 horas</option>
+                      <option>3 horas</option>
+                      <option>Más de 3 horas</option>
+                      <option>No lo tengo claro</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="discomovil">¿Quiere discomóvil?</label>
+                    <select id="discomovil" required>
+                      <option value="">Elige una opción</option>
+                      <option>Sí</option>
+                      <option>No</option>
+                      <option>Quiero que me aconsejéis</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div class="field">
-                  <label for="msg">Detalles</label>
-                  <textarea id="msg" placeholder="Horario aproximado, lugar, número de personas, duración o estilo musical deseado..."></textarea>
+                  <label for="sound">¿Necesita sonido?</label>
+                  <select id="sound" required>
+                    <option value="">Elige una opción</option>
+                    <option>Sí, necesitamos sonido completo</option>
+                    <option>No, ya hay sonido en el lugar</option>
+                    <option>No lo sé todavía</option>
+                  </select>
                 </div>
 
-                <button class="btn btnPrimary" type="submit">Enviar por WhatsApp</button>
-                <p class="note" style="margin:0">No se guardan datos en la web. El formulario solo prepara el texto para WhatsApp.</p>
+                <div class="field">
+                  <label for="msg">Observaciones</label>
+                  <textarea id="msg" placeholder="Horario aproximado, lugar, número de personas, tipo de público o cualquier detalle importante..."></textarea>
+                </div>
+
+                <button class="btn btnPrimary" type="submit">Abrir presupuesto por WhatsApp</button>
+                <p class="note" style="margin:0">El precio final se confirma por WhatsApp según fecha, desplazamiento, formato y necesidades técnicas.</p>
               </form>
             </div>
           </div>
@@ -2023,26 +2086,37 @@
     const form = document.getElementById("bookingForm");
     form?.addEventListener("submit", (e) => {
       e.preventDefault();
-      const name = (document.getElementById("name").value || "").trim();
-      const phone = (document.getElementById("phone").value || "").trim();
-      const date = (document.getElementById("date").value || "").trim();
-      const place = (document.getElementById("place").value || "").trim();
-      const type = (document.getElementById("type").value || "").trim();
-      const msg  = (document.getElementById("msg").value || "").trim();
+      const valueOf = (id) => (document.getElementById(id)?.value || "").trim();
+      const name = valueOf("name");
+      const phone = valueOf("phone");
+      const date = valueOf("date");
+      const place = valueOf("place");
+      const type = valueOf("type");
+      const format = valueOf("format");
+      const duration = valueOf("duration");
+      const discomovil = valueOf("discomovil");
+      const sound = valueOf("sound");
+      const msg = valueOf("msg");
 
       const selectedPack = (form.getAttribute("data-selected-pack") || "").trim();
 
       const lines = [
-        "Hola 👋 Soy " + (name || "___") + ". Quiero información para contratar a *Grupo One Love*.",
+        "Hola 👋 Soy " + (name || "___") + ". Quiero presupuesto para contratar a *Grupo One Love*.",
         (selectedPack ? ("📦 Pack: *" + selectedPack + "*") : ""),
         "",
         "📅 Fecha: " + (date || "___"),
-        "📍 Localidad: " + (place || "___"),
+        "📍 Pueblo / ciudad: " + (place || "___"),
         "🎉 Tipo de evento: " + (type || "___"),
+        "🎤 Formato: " + (format || "___"),
+        "⏱️ Duración: " + (duration || "___"),
+        "🎧 Discomóvil: " + (discomovil || "___"),
+        "🔊 Sonido: " + (sound || "___"),
         "☎️ Teléfono: " + (phone || "___"),
         "",
-        "📝 Detalles:",
+        "📝 Observaciones:",
         (msg || "___"),
+        "",
+        "¿Me podéis confirmar disponibilidad y presupuesto?"
       ].filter(Boolean);
 
       window.open(WHATSAPP_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
