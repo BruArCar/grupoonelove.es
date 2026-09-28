@@ -1014,6 +1014,68 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .ratio{ position:relative; padding-top:56.25%; background:#000; }
     .ratio iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .videoFeature{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(320px,460px);
+      gap:clamp(24px,5vw,64px);
+      align-items:center;
+      padding:clamp(22px,4vw,52px);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--r);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(220,32,48,.18), transparent 42%),
+        linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+      box-shadow:var(--shadow);
+    }
+    .videoPitch{ max-width:640px; }
+    .videoPitch h3{
+      margin:0 0 14px;
+      font-family:Oswald, sans-serif;
+      font-size:clamp(34px,5vw,64px);
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:-.8px;
+    }
+    .videoPitch p{
+      margin:0 0 22px;
+      color:rgba(255,255,255,.76);
+      font-size:clamp(16px,2vw,20px);
+      line-height:1.65;
+    }
+    .videoTags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 26px;
+    }
+    .videoTags span{
+      padding:8px 11px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;
+      background:rgba(0,0,0,.22);
+      color:rgba(255,255,255,.78);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.45px;
+      text-transform:uppercase;
+    }
+    .reelFrame{
+      width:100%;
+      max-width:460px;
+      justify-self:end;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:22px;
+      background:#fff;
+      box-shadow:0 26px 80px rgba(0,0,0,.48);
+    }
+    .reelFrame iframe{
+      display:block;
+      width:100%;
+      height:720px;
+      border:0;
+      background:#fff;
+    }
 
     .bookingGrid{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .form{ display:grid; gap:10px; }
@@ -1263,6 +1325,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         transform: scale(1) !important;
       }
       .visualGrid{ grid-template-columns:1fr; }
+      .videoFeature{ grid-template-columns:1fr; }
+      .videoPitch{ text-align:center; margin:0 auto; }
+      .videoTags, .videoPitch .ctaRow{ justify-content:center; }
+      .reelFrame{ justify-self:center; }
     }
   </style>
 </head>
@@ -1863,18 +1929,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container">
         <div class="sectionHead reveal">
           <div>
-            <h2>Vídeo</h2>
-            <p>Vídeo real de Grupo One Love.</p>
+            <h2>Así se vive One Love</h2>
+            <p>Un momento real de fiesta, con el público disfrutando y la pista llena.</p>
           </div>
-          <a class="btn" href="https://www.youtube.com/@GrupoOneLove" target="_blank" rel="noopener">Ver canal ↗</a>
+          <a class="btn" href="https://www.instagram.com/grupoonelove1/" target="_blank" rel="noopener">Más vídeos en Instagram ↗</a>
         </div>
 
-        <div class="videoWrap reveal">
-          <div class="ratio">
+        <div class="videoFeature reveal">
+          <div class="videoPitch">
+            <h3>Cuando la gente se viene arriba</h3>
+            <p>
+              Una plaza llena, público de todas las edades y un show pensado para que la fiesta no se pare.
+              Esto es lo que queremos llevar a tu evento.
+            </p>
+            <div class="videoTags" aria-label="Características del vídeo">
+              <span>Fiesta real</span>
+              <span>Público bailando</span>
+              <span>Ambiente One Love</span>
+            </div>
+            <div class="ctaRow">
+              <a class="btn btnPrimary" href="https://wa.me/34634352905?text=Hola%2C%20he%20visto%20el%20v%C3%ADdeo%20y%20quiero%20consultar%20fecha%20y%20presupuesto%20para%20mi%20evento" target="_blank" rel="noopener">Quiero este ambiente</a>
+              <a class="btn" href="https://www.instagram.com/reel/Danpl0FIZOF/" target="_blank" rel="noopener">Abrir en Instagram ↗</a>
+            </div>
+          </div>
+          <div class="reelFrame">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/UuB8pnLF4Xo?rel=0&modestbranding=1"
-              title="Grupo One Love — Vídeo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              src="https://www.instagram.com/reel/Danpl0FIZOF/embed/"
+              title="Grupo One Love — público bailando en una fiesta"
+              loading="lazy"
+              allow="autoplay; encrypted-media; picture-in-picture"
               allowfullscreen></iframe>
           </div>
         </div>
